@@ -16,6 +16,7 @@ class MainWindow():
 
     )
     
+    # Creating a frame for title
     title_frame = QFrame(window)
     title_frame.resize(700, 90)
     title_frame.move(30, 15)
