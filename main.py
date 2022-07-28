@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel
 import sys
 
 from matplotlib.pyplot import title
+from sympy import true
 
 app = QApplication(sys.argv)
 
@@ -19,6 +20,12 @@ class MainWindow():
     )
     
     title = QLabel("IP subnet Calculator")
+    title.setStyleSheet(
+        
+    )
+    title.setWordWrap(True)
+    title.setGeometry(192, 25, 550, 100)
+    
     
     # Creating a frame for title
     title_frame = QFrame(window)
