@@ -11,8 +11,19 @@ class MainWindow():
     win_height = 1000
     window.setGeometry(100, 50, win_width, win_height)
     window.setStyleSheet(
-        "background-color: #696969;" 
+        "background-color: #696969;" +
+        "border-radius: 50px"
 
+    )
+    
+    title_frame = QFrame(window)
+    title_frame.resize(700, 90)
+    title_frame.move(30, 15)
+    title_frame.setFrameShape(QFrame.WinPanel)
+    title_frame.setFrameShadow(QFrame.Raised)
+    title_frame.setStyleSheet(
+        "background-color: white;"  +
+        "border-radius: 25px"
     )
     
     # Creating a left frame 
@@ -23,7 +34,7 @@ class MainWindow():
     left_frame.setFrameShadow(QFrame.Raised)
     left_frame.setStyleSheet(
         "background-color: white;"  +
-        "margin-border: 15px"
+        "border-radius: 25px"
     )
     
     # Creating a right frame 
@@ -33,7 +44,8 @@ class MainWindow():
     right_frame.setFrameShape(QFrame.WinPanel)
     right_frame.setFrameShadow(QFrame.Raised)
     right_frame.setStyleSheet(
-        "background-color: white;"
+        "background-color: white;" +
+        "border-radius: 25px"
     )
     
     # Window is hidden by default that is why we are showing it
