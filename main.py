@@ -9,10 +9,12 @@ class MainWindow():
     window.setWindowTitle("IP Subnet Calculator")
     win_width = 1500
     win_height = 900
-    
     window.setGeometry(100, 100, win_width, win_height)
-
-    # Window is hidden by default that is why we are shoeing it
+    window.setStyleSheet(
+        "color: black;" 
+        
+    )
+    # Window is hidden by default that is why we are showing it
     window.show()
     
 
