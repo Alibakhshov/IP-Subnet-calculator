@@ -1,5 +1,5 @@
 # importing from packages fromPyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPixmap
 import sys
 
 from matplotlib.pyplot import title
@@ -18,13 +18,6 @@ class MainWindow():
         "border-radius: 50px"
 
     )
-    
-    title = QLabel("IP subnet Calculator")
-    title.setStyleSheet(
-        
-    )
-    title.setWordWrap(True)
-    title.setGeometry(192, 25, 550, 100)
     
     
     # Creating a frame for title
@@ -60,10 +53,19 @@ class MainWindow():
         "border-radius: 25px"
     )
     
+    # Creating a title for the calculator
+    title = QLabel("IP subnet Calculator", title_frame)
+    title.setStyleSheet(
+        "color: black;" +
+        "font-size: 45px;" 
+    )
+    title.setWordWrap(True)
+    title.setGeometry(500, 25, 550, 40)
+    
     # Window is hidden by default that is why we are showing it
     window.show()
     
-
+    pixmap = QPixmap('tay_info.jpg')
 
 # starting up the event loop
 app.exec()
