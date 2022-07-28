@@ -65,8 +65,8 @@ class MainWindow():
     title.setWordWrap(True)
     title.setGeometry(500, 25, 550, 40)
     
-    image = QLabel(left_frame)
-    image.setGeometry(50, 205, 50, 40)
+    image = QLabel(title_frame)
+    # image.setGeometry(30, 120, 50, 40)
     image.setAlignment(Qt.AlignCenter)
     pixmap = QPixmap('1.png')
     image.setPixmap(pixmap)
