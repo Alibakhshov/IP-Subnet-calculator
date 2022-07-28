@@ -1,5 +1,8 @@
 # importing from packages fromPyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPixmap
+from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel
+from PyQt5 import QtCore, QtGui
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 import sys
 
 from matplotlib.pyplot import title
@@ -65,7 +68,8 @@ class MainWindow():
     # Window is hidden by default that is why we are showing it
     window.show()
     
-    pixmap = QPixmap('tay_info.jpg')
+    pixmap = QPixmap('1.png')
+    title_frame.setPixmap(pixmap)
 
 # starting up the event loop
 app.exec()
