@@ -6,6 +6,10 @@ app = QApplication(sys.argv)
 
 window = QWidget()
 
+window.setWindowTitle("IP Subnet Calculator")
+
+
+
 # Window is hidden by default that is why we are shoeing it
 window.show()
 
