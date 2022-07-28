@@ -65,15 +65,17 @@ class MainWindow():
     title.setWordWrap(True)
     title.setGeometry(500, 25, 550, 40)
     
-    # Window is hidden by default that is why we are showing it
-    window.show()
-    
     image = QLabel(left_frame)
-    # image.setGeometry(20, 25, 50, 40)
+    image.setGeometry(50, 205, 50, 40)
     image.setAlignment(Qt.AlignCenter)
     pixmap = QPixmap('1.png')
     image.setPixmap(pixmap)
-    image.setScaledContents(True)
+    
+    
+    # Window is hidden by default that is why we are showing it
+    window.show()
+    
+   
     
 
 # starting up the event loop
