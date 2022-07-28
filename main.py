@@ -1,6 +1,8 @@
 # importing from packages fromPyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QFrame
+from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel
 import sys
+
+from matplotlib.pyplot import title
 
 app = QApplication(sys.argv)
 
@@ -16,9 +18,11 @@ class MainWindow():
 
     )
     
+    title = QLabel("IP subnet Calculator")
+    
     # Creating a frame for title
     title_frame = QFrame(window)
-    title_frame.resize(700, 90)
+    title_frame.resize(1450, 90)
     title_frame.move(30, 15)
     title_frame.setFrameShape(QFrame.WinPanel)
     title_frame.setFrameShadow(QFrame.Raised)
