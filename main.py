@@ -8,18 +8,34 @@ class MainWindow():
     window = QWidget()
     window.setWindowTitle("IP Subnet Calculator")
     win_width = 1500
-    win_height = 900
-    window.setGeometry(100, 100, win_width, win_height)
-    # window.setStyleSheet(
-    #     "background-color: #696969;" 
+    win_height = 1000
+    window.setGeometry(100, 50, win_width, win_height)
+    window.setStyleSheet(
+        "background-color: #696969;" 
 
-    # )
+    )
     
+    # Creating a left frame 
+    left_frame = QFrame(window) 
+    left_frame.resize(700, 860)
+    left_frame.move(30, 120)
+    left_frame.setFrameShape(QFrame.WinPanel)
+    left_frame.setFrameShadow(QFrame.Raised)
+    left_frame.setStyleSheet(
+        "background-color: white;"  +
+        "margin-border: 15px"
+    )
     
-    frame = QFrame(window)
-    frame.setFrameShape(QFrame.WinPanel)
-    frame.resize(500, 100)
-    frame.setFrameShadow(QFrame.Raised)
+    # Creating a right frame 
+    right_frame = QFrame(window)
+    right_frame.resize(700, 860)
+    right_frame.move(770, 120)
+    right_frame.setFrameShape(QFrame.WinPanel)
+    right_frame.setFrameShadow(QFrame.Raised)
+    right_frame.setStyleSheet(
+        "background-color: white;"
+    )
+    
     # Window is hidden by default that is why we are showing it
     window.show()
     

@@ -42,3 +42,12 @@ If you have a suggestion that would make this better, please fork the repo and c
 * []()
 * [GitHub Pages](https://pages.github.com)
 
+## Contact
+
+<a href="https://www.linkedin.com/in/rauf-alibakhshov-6b5aa5210/">
+    <img height="40" src="https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_in-306.png"/>
+</a>
+
+<a href="https://open.spotify.com/playlist/7KmIUNWrK8wEHfQcQfFrQ1?si=0e2d44043b5a40a4">
+    <img height="40" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/315_Spotify_logo-128.png"/>
+</a>
