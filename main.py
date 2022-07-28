@@ -4,15 +4,18 @@ import sys
 
 app = QApplication(sys.argv)
 
-def MainWindow():
+class MainWindow():
     window = QWidget()
     window.setWindowTitle("IP Subnet Calculator")
-
-
+    win_width = 1500
+    win_height = 900
+    
+    window.setGeometry(100, 100, win_width, win_height)
 
     # Window is hidden by default that is why we are shoeing it
     window.show()
-MainWindow()
+    
+
 
 # starting up the event loop
 app.exec()
