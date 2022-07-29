@@ -1,5 +1,5 @@
 # importing from packages fromPyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -79,6 +79,23 @@ class MainWindow():
         "background-color: white;" +
         "border-radius: 25px;" 
     )
+    
+    # creating a button to calculate taylor polynomial
+    tay_calc_button = QPushButton("Taylor Polynomial", self)
+    tay_calc_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    tay_calc_button.setStyleSheet(
+                                "*{border: 5px solid '#BC006C';" +
+                                "border-radius: 45px;" +
+                                "color: 'white';" +
+                                "font-size: 20px;}" +
+                                "*:hover{background: '#BC006C';}"           
+    ) # setting border style
+  
+    # setting geometry to the push button
+    tay_calc_button.setGeometry(50, 300, 200, 40)
+  
+    # adding action to the button
+    tay_calc_button.clicked.connect(self.tay_calculate)
     
     # Creating a title for the calculator
     # title = QLabel("IP subnet Calculator", left_frame)
