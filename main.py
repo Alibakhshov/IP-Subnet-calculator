@@ -1,12 +1,15 @@
 # importing from packages fromPyQt5
+from ast import Str
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
+import socket
 
-from matplotlib.pyplot import title
-from sympy import true
+from numpy import int16
+
+
 
 app = QApplication(sys.argv)
 
@@ -22,11 +25,11 @@ class MainWindow():
 
     )
     
-    
+    global IP_address
     
     def myIPAddress():
-        import socket
-
+        
+        global IP_address
         host_name = socket.gethostname()
         IP_address = socket.gethostbyname(host_name)
 
@@ -138,13 +141,15 @@ class MainWindow():
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
     result.setGeometry(90, 210, 800, 60)
-    result.setStyleSheet("QLabel"
-                                  "{"
-                                  "border : 3px solid black;"
-                                  "background : white;"
-                                  "}")
+    # result.setStyleSheet("QLabel"
+    #                               "{"
+    #                               "border : 3px solid black;"
+    #                               "background : white;"
+    #                               "}")
     result.setFont(QFont('Arial', 11))
-    result.setText(str(myIPAddress))
+    ip = myIPAddress()
+    result.setText(str(ip))
+    print(ip)
     
     
     
