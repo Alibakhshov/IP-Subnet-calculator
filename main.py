@@ -1,5 +1,4 @@
 # importing from packages fromPyQt5
-from curses import window
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
@@ -94,16 +93,32 @@ class MainWindow():
   
     # setting geometry to the push button
     myIP_button.setGeometry(50, 300, 200, 40)
+    # # adding action to the button
+    # myIP_button.clicked.connect(close_window)
+    
   
+  
+    # creating a button to show the IP address
+    exit_button = QPushButton("My IP address", right_vert_frame)
+    exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    exit_button.setStyleSheet(
+                                "*{border: 5px solid '#BC006C';" +
+                                "border-radius: 45px;" +
+                                "color: 'black';" +
+                                "font-size: 20px;}" +
+                                "*:hover{background: '#BC006C';}"           
+    ) # setting border style
+  
+    # setting geometry to the push button
+    exit_button.setGeometry(50, 350, 200, 40)
+     
     # creating function to close the window
     def close_window():
-        window.close()
+        app.close()
         
     
     
-    # # adding action to the button
-    # tay_calc_button.clicked.connect(self.tay_calculate)
-    
+   
     
     
     # Creating a title for the calculator
