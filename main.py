@@ -80,10 +80,10 @@ class MainWindow():
         "border-radius: 25px;" 
     )
     
-    # creating a button to calculate taylor polynomial
-    tay_calc_button = QPushButton("Taylor Polynomial", self)
-    tay_calc_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
-    tay_calc_button.setStyleSheet(
+    # creating a button to show the IP address
+    myIP_button = QPushButton("My IP address", right_vert_frame)
+    myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    myIP_button.setStyleSheet(
                                 "*{border: 5px solid '#BC006C';" +
                                 "border-radius: 45px;" +
                                 "color: 'white';" +
@@ -92,10 +92,12 @@ class MainWindow():
     ) # setting border style
   
     # setting geometry to the push button
-    tay_calc_button.setGeometry(50, 300, 200, 40)
+    myIP_button.setGeometry(50, 300, 200, 40)
   
-    # adding action to the button
-    tay_calc_button.clicked.connect(self.tay_calculate)
+    # # adding action to the button
+    # tay_calc_button.clicked.connect(self.tay_calculate)
+    
+    
     
     # Creating a title for the calculator
     # title = QLabel("IP subnet Calculator", left_frame)
