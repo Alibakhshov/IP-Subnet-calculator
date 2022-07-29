@@ -1,5 +1,5 @@
 # importing from packages fromPyQt5
-from ast import Str
+
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
@@ -25,17 +25,25 @@ class MainWindow():
 
     )
     
-    global IP_address
+    global result
+    global ipad
     
-    def myIPAddress():
-        
+    def ipad():
         global IP_address
         host_name = socket.gethostname()
         IP_address = socket.gethostbyname(host_name)
 
         print(IP_address)
-
+    
+    def myIPAddress():
         
+        # global IP_address
+        # host_name = socket.gethostname()
+        # IP_address = socket.gethostbyname(host_name)
+
+        # print(IP_address)
+
+        result.setText(str(ipad()))
         
     
     
@@ -147,9 +155,9 @@ class MainWindow():
                                   "background : white;"
                                   "}")
     result.setFont(QFont('Arial', 11))
-    ip = str(myIPAddress())
-    result.setText(str(myIPAddress()))
-    print(ip)
+    # ip = str(myIPAddress())
+    # result.setText(str(myIPAddress()))
+    # print(ip)
     
     
     
