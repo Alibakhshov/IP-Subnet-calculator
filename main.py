@@ -118,6 +118,17 @@ class MainWindow():
     exit_button.setGeometry(50, 350, 200, 40)
     exit_button.clicked.connect(close_window)
      
+    # Creating a label to show the result
+    result = QLabel()
+    result.setAlignment(Qt.AlignCenter)
+    result.setGeometry(90, 210, 800, 60)
+    result.setStyleSheet("QLabel"
+                                  "{"
+                                  "border : 3px solid black;"
+                                  "background : white;"
+                                  "}")
+    result.setFont(QFont('Arial', 11))
+    
     
     
     
