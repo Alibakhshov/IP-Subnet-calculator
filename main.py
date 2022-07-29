@@ -141,11 +141,11 @@ class MainWindow():
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
     result.setGeometry(90, 210, 800, 60)
-    # result.setStyleSheet("QLabel"
-    #                               "{"
-    #                               "border : 3px solid black;"
-    #                               "background : white;"
-    #                               "}")
+    result.setStyleSheet("QLabel"
+                                  "{"
+                                  "border : 3px solid black;"
+                                  "background : white;"
+                                  "}")
     result.setFont(QFont('Arial', 11))
     ip = myIPAddress()
     result.setText(str(ip))
