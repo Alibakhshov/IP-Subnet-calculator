@@ -22,6 +22,21 @@ class MainWindow():
 
     )
     
+    
+    
+    def myIPAddress():
+        import socket
+
+        host_name = socket.gethostname()
+        IP_address = socket.gethostbyname(host_name)
+
+        print(IP_address)
+
+        
+        
+    
+    
+    
     # creating function to close the window
     def close_window():
         app.close()
@@ -98,8 +113,8 @@ class MainWindow():
   
     # setting geometry to the push button
     myIP_button.setGeometry(50, 300, 200, 40)
-    # # adding action to the button
-    # myIP_button.clicked.connect(close_window)
+    # adding action to the button
+    myIP_button.clicked.connect(myIPAddress)
     
   
   
@@ -119,7 +134,8 @@ class MainWindow():
     exit_button.clicked.connect(close_window)
      
     # Creating a label to show the result
-    result = QLabel()
+    
+    result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
     result.setGeometry(90, 210, 800, 60)
     result.setStyleSheet("QLabel"
@@ -128,7 +144,7 @@ class MainWindow():
                                   "background : white;"
                                   "}")
     result.setFont(QFont('Arial', 11))
-    
+    result.setText(str(myIPAddress))
     
     
     
