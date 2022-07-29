@@ -22,27 +22,27 @@ class MainWindow():
 
     )
     
-    
-    # Creating a frame for title
-    title_frame = QFrame(window)
-    title_frame.resize(1450, 90)
-    title_frame.move(30, 15)
-    title_frame.setFrameShape(QFrame.WinPanel)
-    title_frame.setFrameShadow(QFrame.Raised)
-    title_frame.setStyleSheet(
-        "background-color: black;"  +
-        "border-radius: 25px"
-    )
-    
     # Creating a left frame 
-    left_frame = QFrame(title_frame) 
+    left_frame = QFrame(window) 
     left_frame.resize(1445, 970)
     left_frame.move(30, 15)
     left_frame.setFrameShape(QFrame.WinPanel)
     left_frame.setFrameShadow(QFrame.Raised)
     left_frame.setStyleSheet(
         "background-color: white;"  +
-        "border-radius: 25px"
+        "border-radius: 25px;" +
+        
+    )
+    
+    # Creating a frame for title
+    title_frame = QFrame(left_frame)
+    title_frame.resize(1425, 90)
+    title_frame.move(10, 15)
+    title_frame.setFrameShape(QFrame.WinPanel)
+    title_frame.setFrameShadow(QFrame.Raised)
+    title_frame.setStyleSheet(
+        "background-color: black;"  +
+        "border-radius: 25px;"
     )
     
     # Creating a right frame 
