@@ -23,12 +23,12 @@ class MainWindow():
     )
     
     # Creating a left frame 
-    left_frame = QFrame(window) 
-    left_frame.resize(1445, 970)
-    left_frame.move(30, 15)
-    left_frame.setFrameShape(QFrame.WinPanel)
-    left_frame.setFrameShadow(QFrame.Raised)
-    left_frame.setStyleSheet(
+    main_frame = QFrame(window) 
+    main_frame.resize(1445, 970)
+    main_frame.move(30, 15)
+    main_frame.setFrameShape(QFrame.WinPanel)
+    main_frame.setFrameShadow(QFrame.Raised)
+    main_frame.setStyleSheet(
         "border: 5px solid yellow;" +
         "background-color: white;" +
         "border-radius: 25px;" 
@@ -36,7 +36,7 @@ class MainWindow():
     )
     
     # Creating a frame for title
-    title_frame = QFrame(left_frame)
+    title_frame = QFrame(main_frame)
     title_frame.resize(1425, 90)
     title_frame.move(10, 15)
     title_frame.setFrameShape(QFrame.WinPanel)
@@ -47,12 +47,12 @@ class MainWindow():
     )
     
     # Creating a right frame 
-    right_frame = QFrame(left_frame)
-    right_frame.resize(700, 860)
-    right_frame.move(770, 120)
-    right_frame.setFrameShape(QFrame.WinPanel)
-    right_frame.setFrameShadow(QFrame.Raised)
-    right_frame.setStyleSheet(
+    right_vert_frame = QFrame(main_frame)
+    right_vert_frame.resize(650, 860)
+    right_vert_frame.move(770, 120)
+    right_vert_frame.setFrameShape(QFrame.WinPanel)
+    right_vert_frame.setFrameShadow(QFrame.Raised)
+    right_vert_frame.setStyleSheet(
         "border: 5px solid yellow;" +
         "background-color: white;" +
         "border-radius: 25px;" 
