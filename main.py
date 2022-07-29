@@ -58,17 +58,27 @@ class MainWindow():
         "border-radius: 25px;" 
     )
     
-    horiz_frame = QFrame(main_frame)
-    horiz_frame.resize(710, 430)
-    horiz_frame.move(10, 120)
-    horiz_frame.setFrameShape(QFrame.WinPanel)
-    horiz_frame.setFrameShadow(QFrame.Raised)
-    horiz_frame.setStyleSheet(
+    bottom_horiz_frame = QFrame(main_frame)
+    bottom_horiz_frame.resize(750, 430)
+    bottom_horiz_frame.move(10, 120)
+    bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
+    bottom_horiz_frame.setFrameShadow(QFrame.Raised)
+    bottom_horiz_frame.setStyleSheet(
         "border: 5px solid yellow;" +
         "background-color: white;" +
         "border-radius: 25px;" 
     )
     
+    bottom_horiz_frame = QFrame(main_frame)
+    bottom_horiz_frame.resize(750, 430)
+    bottom_horiz_frame.move(10, 520)
+    bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
+    bottom_horiz_frame.setFrameShadow(QFrame.Raised)
+    bottom_horiz_frame.setStyleSheet(
+        "border: 5px solid yellow;" +
+        "background-color: white;" +
+        "border-radius: 25px;" 
+    )
     
     # Creating a title for the calculator
     # title = QLabel("IP subnet Calculator", left_frame)
