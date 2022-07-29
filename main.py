@@ -30,14 +30,14 @@ class MainWindow():
     title_frame.setFrameShape(QFrame.WinPanel)
     title_frame.setFrameShadow(QFrame.Raised)
     title_frame.setStyleSheet(
-        "background-color: white;"  +
+        "background-color: black;"  +
         "border-radius: 25px"
     )
     
     # Creating a left frame 
-    left_frame = QFrame(window) 
-    left_frame.resize(700, 860)
-    left_frame.move(30, 120)
+    left_frame = QFrame(title_frame) 
+    left_frame.resize(1445, 970)
+    left_frame.move(30, 15)
     left_frame.setFrameShape(QFrame.WinPanel)
     left_frame.setFrameShadow(QFrame.Raised)
     left_frame.setStyleSheet(
@@ -57,13 +57,13 @@ class MainWindow():
     # )
     
     # Creating a title for the calculator
-    title = QLabel("IP subnet Calculator", title_frame)
-    title.setStyleSheet(
-        "color: black;" +
-        "font-size: 45px;" 
-    )
-    title.setWordWrap(True)
-    title.setGeometry(500, 25, 550, 40)
+    # title = QLabel("IP subnet Calculator", title_frame)
+    # title.setStyleSheet(
+    #     "color: black;" +
+    #     "font-size: 45px;" 
+    # )
+    # title.setWordWrap(True)
+    # title.setGeometry(500, 25, 550, 40)
     
     # Adding an image
     # image = QLabel(title_frame)
