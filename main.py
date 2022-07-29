@@ -30,8 +30,8 @@ class MainWindow():
     left_frame.setFrameShadow(QFrame.Raised)
     left_frame.setStyleSheet(
         "border: 10px solid red;" +
-        "background-color: white;"  
-        # # "border-radius: 25px;" 
+        "background-color: white;" +
+        "border-radius: 25px;" 
         
     )
     
