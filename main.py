@@ -1,4 +1,5 @@
 # importing from packages fromPyQt5
+from curses import window
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
@@ -94,6 +95,12 @@ class MainWindow():
     # setting geometry to the push button
     myIP_button.setGeometry(50, 300, 200, 40)
   
+    # creating function to close the window
+    def close_window():
+        window.close()
+        
+    
+    
     # # adding action to the button
     # tay_calc_button.clicked.connect(self.tay_calculate)
     
