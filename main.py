@@ -58,20 +58,20 @@ class MainWindow():
         "border-radius: 25px;" 
     )
     
-    bottom_horiz_frame = QFrame(main_frame)
-    bottom_horiz_frame.resize(750, 430)
-    bottom_horiz_frame.move(10, 120)
-    bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
-    bottom_horiz_frame.setFrameShadow(QFrame.Raised)
-    bottom_horiz_frame.setStyleSheet(
+    top_horiz_frame = QFrame(main_frame)
+    top_horiz_frame.resize(750, 400)
+    top_horiz_frame.move(10, 120)
+    top_horiz_frame.setFrameShape(QFrame.WinPanel)
+    top_horiz_frame.setFrameShadow(QFrame.Raised)
+    top_horiz_frame.setStyleSheet(
         "border: 5px solid yellow;" +
         "background-color: white;" +
         "border-radius: 25px;" 
     )
     
     bottom_horiz_frame = QFrame(main_frame)
-    bottom_horiz_frame.resize(750, 430)
-    bottom_horiz_frame.move(10, 520)
+    bottom_horiz_frame.resize(750, 400)
+    bottom_horiz_frame.move(10, 550)
     bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
     bottom_horiz_frame.setFrameShadow(QFrame.Raised)
     bottom_horiz_frame.setStyleSheet(
