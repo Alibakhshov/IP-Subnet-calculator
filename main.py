@@ -7,7 +7,7 @@ from PyQt5.QtCore import *
 import sys
 import socket
 
-from numpy import int16
+from numpy import int16, str0
 
 
 
@@ -147,8 +147,8 @@ class MainWindow():
                                   "background : white;"
                                   "}")
     result.setFont(QFont('Arial', 11))
-    ip = myIPAddress()
-    result.setText(str(ip))
+    ip = str(myIPAddress())
+    result.setText(str(myIPAddress()))
     print(ip)
     
     
