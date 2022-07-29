@@ -22,6 +22,11 @@ class MainWindow():
 
     )
     
+    # creating function to close the window
+    def close_window():
+        app.close()
+        
+    
     # Creating a left frame 
     main_frame = QFrame(window) 
     main_frame.resize(1445, 970)
@@ -109,13 +114,11 @@ class MainWindow():
                                 "*:hover{background: '#BC006C';}"           
     ) # setting border style
   
-    # setting geometry to the push button
+    # setting geometry to the exit button
     exit_button.setGeometry(50, 350, 200, 40)
+    exit_button.clicked.connect(close_window)
      
-    # creating function to close the window
-    def close_window():
-        app.close()
-        
+    
     
     
    
