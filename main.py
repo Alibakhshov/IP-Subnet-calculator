@@ -99,7 +99,7 @@ class MainWindow():
   
   
     # creating a button to show the IP address
-    exit_button = QPushButton("My IP address", right_vert_frame)
+    exit_button = QPushButton("Exit", right_vert_frame)
     exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     exit_button.setStyleSheet(
                                 "*{border: 5px solid '#BC006C';" +
