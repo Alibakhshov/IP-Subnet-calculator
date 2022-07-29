@@ -59,8 +59,8 @@ class MainWindow():
     )
     
     horiz_frame = QFrame(main_frame)
-    horiz_frame.resize(650, 430)
-    horiz_frame.move(30, 120)
+    horiz_frame.resize(710, 430)
+    horiz_frame.move(10, 120)
     horiz_frame.setFrameShape(QFrame.WinPanel)
     horiz_frame.setFrameShadow(QFrame.Raised)
     horiz_frame.setStyleSheet(
