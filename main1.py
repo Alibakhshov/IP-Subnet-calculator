@@ -34,27 +34,20 @@ class Window(QMainWindow):
     def MainWindow(self):
         global result
         
-        def ipad():
+        
             
-            # host_name = socket.gethostname()
-            # IP_address = socket.gethostbyname(host_name)
-
-            # print(IP_address)
-            a = 2
-            b = 3
-            c = a + b
-            print(c)
         
         def myIPAddress():
             
-            # global IP_address
-            # host_name = socket.gethostname()
-            # IP_address = socket.gethostbyname(host_name)
+            global IP_address
+            host_name = socket.gethostname()
+            IP_address = socket.gethostbyname(host_name)
 
-            # print(IP_address)
-            ip = str(ipad())
-            result.setText(str(ip))
-            print(ip)
+            print(IP_address)
+            
+        ip = str(myIPAddress())
+        result.setText(str(ip))
+        print(ip)
         
     
     
