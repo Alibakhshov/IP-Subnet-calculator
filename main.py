@@ -113,8 +113,8 @@ class MainWindow():
         "*{border: 5px solid '#BC006C';" +
         "border-radius: 45px;" +
         "color: 'white';" +
-         "font-size: 20px;}" +
-        "*:hover{background: '#BC006C';}"           
+        "font-size: 20px;}" +
+        "*:hover{background: '#696969';}"           
     ) # setting border style
   
     # setting geometry to the push button
