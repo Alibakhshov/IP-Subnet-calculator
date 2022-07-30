@@ -176,10 +176,10 @@ class MainWindow():
     result.setFont(QFont('Arial', 11))
     
     binToDec_input = QLineEdit(bottom_horiz_frame)
-    # binToDec_input.setStyleSheet(
-        
-    # )
-    binToDec_input.setGeometry(300, 30, 400, 60)
+    binToDec_input.setStyleSheet(
+        "font: 25px;"
+    )
+    binToDec_input.setGeometry(330, 30, 400, 60)
     
     
     # Creating a title for the calculator
