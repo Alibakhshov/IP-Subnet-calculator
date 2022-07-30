@@ -21,7 +21,7 @@ class Window(QMainWindow):
             "border-radius: 50px"
 
         )
-        
+    
         grid = QGridLayout() # initializing grid layout
         self.setLayout(grid) # applying grid in window object
         # calling method
@@ -32,6 +32,37 @@ class Window(QMainWindow):
         self.show()
         
     def MainWindow(self):
+        global result
+        
+        def ipad():
+            
+            # host_name = socket.gethostname()
+            # IP_address = socket.gethostbyname(host_name)
+
+            # print(IP_address)
+            a = 2
+            b = 3
+            c = a + b
+            print(c)
+        
+        def myIPAddress():
+            
+            # global IP_address
+            # host_name = socket.gethostname()
+            # IP_address = socket.gethostbyname(host_name)
+
+            # print(IP_address)
+            ip = str(ipad())
+            result.setText(str(ip))
+            print(ip)
+        
+    
+    
+    
+        # creating function to close the window
+        def close_window():
+            self.close()
+        
         # Creating a left frame 
         main_frame = QFrame(self) 
         main_frame.resize(1445, 970)
@@ -104,7 +135,7 @@ class Window(QMainWindow):
         # setting geometry to the push button
         myIP_button.setGeometry(50, 300, 200, 40)
         # adding action to the button
-        # myIP_button.clicked.connect(myIPAddress)
+        myIP_button.clicked.connect(myIPAddress)
         
         
         
@@ -123,7 +154,7 @@ class Window(QMainWindow):
     
         # setting geometry to the exit button
         exit_button.setGeometry(50, 350, 200, 40)
-        # exit_button.clicked.connect(close_window)
+        exit_button.clicked.connect(close_window)
         
         # Creating a label to show the result
         
@@ -136,6 +167,9 @@ class Window(QMainWindow):
                                     "background : white;"
                                     "}")
         result.setFont(QFont('Arial', 11))
+        
+        
+            
             
 # create pyqt5 app
 App = QApplication(sys.argv)
