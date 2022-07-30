@@ -162,7 +162,7 @@ class MainWindow():
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
     binToDec_button.setGeometry(50, 350, 200, 40)
-    binToDec_button.clicked.connect(myHostName)
+    binToDec_button.clicked.connect(BinToDec)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
