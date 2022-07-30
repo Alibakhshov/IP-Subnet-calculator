@@ -1,4 +1,5 @@
 # importing from packages fromPyQt5
+from itertools import count
 from PyQt5.QtWidgets import (
 QApplication, 
 QWidget,
@@ -11,6 +12,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
 import socket
+
+from numpy import number
 
 app = QApplication(sys.argv)
 
@@ -45,23 +48,32 @@ class MainWindow():
         result.setText(host_name)
         
     def BinToDec():
-        #get an binary number input from  user
         binary_number = int(binToDec_input.text())
-        #create a decimal variable and set to 0
         decimal_value=0
-        #initialize a variable i and set to 1
-        i = 1
-        #get the length of the binary number
+        a = 1
         length = len(str(binary_number))
-        #logic to convert binary to decimal
-        for k in range(length):
+        for i in range(length):
             reminder = binary_number % 10
-            decimal_value = decimal_value + (reminder * i)
-            i = i * 2
+            decimal_value = decimal_value + (reminder * a)
+            a = a * 2
             binary_number = int(binary_number/10)
         #display the decimal value
         print("Decimal number is  ", decimal_value)
-        result.setText(decimal_value)
+        result.setText(str(decimal_value))
+        
+        if int(binToDec_input.text()) == "":
+            print("Error")
+        
+        # count = 0
+        # while binary_number != 0:
+        #     binary_number //= 10
+        #     count += 1
+
+        # print("Number of digits: " + str(count))
+        
+        
+        
+        
     
     # creating function to close the window
     def close_window():
