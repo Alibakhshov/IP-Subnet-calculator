@@ -162,7 +162,8 @@ class MainWindow():
     result.setGeometry(20, 170, 700, 60)
     result.setStyleSheet(
         "background-color: white;" +
-        "border-color: white;"
+        "border-color: white;" + 
+        "font: 55px;"
     )
     result.setFont(QFont('Arial', 11))
     
