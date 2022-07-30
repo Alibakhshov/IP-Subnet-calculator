@@ -151,6 +151,19 @@ class MainWindow():
     myHostName_button.setGeometry(50, 350, 200, 40)
     myHostName_button.clicked.connect(myHostName)
     
+    # creating a button to convert binary to decimal
+    binToDec_button = QPushButton("My hostname", right_vert_frame)
+    binToDec_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    binToDec_button.setStyleSheet(
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
+        "color: 'black';" +
+        "font-size: 20px;}" +
+        "*:hover{background: '#2F4F4F';}"            
+    ) # setting border style
+    binToDec_button.setGeometry(50, 350, 200, 40)
+    binToDec_button.clicked.connect(myHostName)
+    
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
     exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
