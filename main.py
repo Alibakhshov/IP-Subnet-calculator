@@ -42,7 +42,7 @@ class MainWindow():
         # IP_address = socket.gethostbyname(host_name)
 
         # print(IP_address)
-        ip = ipad()
+        ip = str(int(ipad()))
         result.setText(ip)
         print(ip)
         
