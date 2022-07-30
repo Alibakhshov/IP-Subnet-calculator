@@ -127,10 +127,7 @@ class MainWindow():
     myHostName_button.setGeometry(50, 400, 200, 40)
     myHostName_button.clicked.connect(myHostName)
     
-    
-  
-  
-    # creating a button to show the IP address
+    # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
     exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     exit_button.setStyleSheet(
