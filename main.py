@@ -43,7 +43,7 @@ class MainWindow():
 
         # print(IP_address)
         ip = ipad()
-        result.setText(str(ip))
+        result.setText(ip)
         print(ip)
         
     
