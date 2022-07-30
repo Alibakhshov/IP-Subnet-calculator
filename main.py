@@ -48,7 +48,7 @@ class MainWindow():
         # IP_address = socket.gethostbyname(host_name)
 
         # print(IP_address)
-        ip = ipad()
+        ip = str(ipad())
         result.setText(str(ip))
         print(ip)
         
@@ -134,6 +134,8 @@ class MainWindow():
     # adding action to the button
     myIP_button.clicked.connect(myIPAddress)
     
+    
+    
   
   
     # creating a button to show the IP address
@@ -162,6 +164,7 @@ class MainWindow():
                                   "background : white;"
                                   "}")
     result.setFont(QFont('Arial', 11))
+    
     # ip = str(myIPAddress())
     # result.setText(str(myIPAddress()))
     # print(ip)
