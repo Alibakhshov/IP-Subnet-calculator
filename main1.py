@@ -154,8 +154,8 @@ class Window(QMainWindow):
 
             print(IP_address)
             
-        ip = str(myIPAddress())
-        result.setText(ip)
+        ip = myIPAddress()
+        result.setText(str(ip))
         print(ip)
         
     
