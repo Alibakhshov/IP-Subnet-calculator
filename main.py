@@ -1,15 +1,10 @@
 # importing from packages fromPyQt5
-
 from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
 import socket
-
-from numpy import int16, str0
-
-
 
 app = QApplication(sys.argv)
 
@@ -116,10 +111,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"           
     ) # setting border style
-  
-    # setting geometry to the push button
     myIP_button.setGeometry(50, 300, 200, 40)
-    # adding action to the button
     myIP_button.clicked.connect(myIPAddress)
     
     # creating a button to show the hostname
@@ -132,10 +124,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-  
-    # setting geometry to the push button
     myIP_button.setGeometry(50, 400, 200, 40)
-    # adding action to the button
     myIP_button.clicked.connect(myHostName)
     
     
@@ -151,10 +140,9 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-  
-    # setting geometry to the exit button
     exit_button.setGeometry(50, 350, 200, 40)
     exit_button.clicked.connect(close_window)
+     
      
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
