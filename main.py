@@ -57,8 +57,7 @@ class MainWindow():
     main_frame.setStyleSheet(
         "border: 5px solid #2F4F4F;" +
         "background-color: white;" +
-        "border-radius: 25px;" 
-        
+        "border-radius: 25px;"     
     )
     
     # Creating a frame for title
@@ -68,8 +67,9 @@ class MainWindow():
     title_frame.setFrameShape(QFrame.WinPanel)
     title_frame.setFrameShadow(QFrame.Raised)
     title_frame.setStyleSheet(
-        "background-color: white;"  +
-        "border-radius: 25px;"
+        "border: 5px solid #2F4F4F;" +
+        "background-color: white;" +
+        "border-radius: 25px;" 
     )
     
     # Creating a right frame 
@@ -79,7 +79,7 @@ class MainWindow():
     right_vert_frame.setFrameShape(QFrame.WinPanel)
     right_vert_frame.setFrameShadow(QFrame.Raised)
     right_vert_frame.setStyleSheet(
-        "border: 5px solid yellow;" +
+        "border: 5px solid #2F4F4F;" +
         "background-color: white;" +
         "border-radius: 25px;" 
     )
@@ -90,9 +90,9 @@ class MainWindow():
     top_horiz_frame.setFrameShape(QFrame.WinPanel)
     top_horiz_frame.setFrameShadow(QFrame.Raised)
     top_horiz_frame.setStyleSheet(
-        "border: 5px solid yellow;" +
+        "border: 5px solid #2F4F4F;" +
         "background-color: white;" +
-        "border-radius: 25px;" 
+        "border-radius: 25px;"  
     )
     
     bottom_horiz_frame = QFrame(main_frame)
@@ -101,7 +101,7 @@ class MainWindow():
     bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
     bottom_horiz_frame.setFrameShadow(QFrame.Raised)
     bottom_horiz_frame.setStyleSheet(
-        "border: 5px solid yellow;" +
+        "border: 5px solid #2F4F4F;" +
         "background-color: white;" +
         "border-radius: 25px;" 
     )
