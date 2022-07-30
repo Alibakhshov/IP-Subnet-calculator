@@ -30,7 +30,7 @@ class MainWindow():
     global IP_address
     global host_name
     
-    def ipad(host_name, IP_address):
+    def ipad():
         
         # host_name = socket.gethostname()
         # IP_address = socket.gethostbyname(host_name)
@@ -48,8 +48,8 @@ class MainWindow():
         # IP_address = socket.gethostbyname(host_name)
 
         # print(IP_address)
-        ip = ipad(host_name, IP_address)
-        result.setText(ip)
+        ip = ipad()
+        result.setText(str(ip))
         print(ip)
         
     
