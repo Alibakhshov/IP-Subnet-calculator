@@ -41,7 +41,7 @@ class MainWindow():
         host_name = socket.gethostname()
         print(host_name)
         result.setText(host_name)
-    
+        
     
     # creating function to close the window
     def close_window():
@@ -157,7 +157,6 @@ class MainWindow():
     exit_button.clicked.connect(close_window)
      
     # Creating a label to show the result
-    
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
     result.setGeometry(90, 210, 800, 60)
