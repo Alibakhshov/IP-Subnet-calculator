@@ -29,15 +29,18 @@ class MainWindow():
     
     def myIPAddress():
         
-        # host_name = socket.gethostname()
-        IP_address = socket.gethostbyname()
+        host_name = socket.gethostname()
+        IP_address = socket.gethostbyname(host_name)
 
         print(IP_address)
-        # print(host_name)
+        print(host_name)
         result.setText(IP_address)
         
+    def myHostName():
         
-    
+        host_name = socket.gethostname()
+        print(host_name)
+        result.setText(host_name)
     
     
     # creating function to close the window
