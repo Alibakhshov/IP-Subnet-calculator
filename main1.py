@@ -33,10 +33,9 @@ class Window(QMainWindow):
         self.show()
         
     def MainWindow(self):
+        
         global result
         
-        
-            
         
         def myIPAddress():
             
