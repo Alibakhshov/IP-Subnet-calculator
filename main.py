@@ -179,7 +179,7 @@ class MainWindow():
     # binToDec_input.setStyleSheet(
         
     # )
-    binToDec_input.setGeometry(20, 30, 700, 60)
+    binToDec_input.setGeometry(300, 30, 400, 60)
     
     
     # Creating a title for the calculator
