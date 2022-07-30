@@ -167,10 +167,6 @@ class MainWindow():
                                   "}")
     result.setFont(QFont('Arial', 11))
     
-    # ip = str(myIPAddress())
-    # result.setText(str(myIPAddress()))
-    # print(ip)
-    
     
     
    
