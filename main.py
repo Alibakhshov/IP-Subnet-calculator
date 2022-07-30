@@ -26,31 +26,16 @@ class MainWindow():
     )
     
     global result
-    global ipad
-    global IP_address
-    global host_name
     
-    def ipad():
-        
-        # host_name = socket.gethostname()
-        # IP_address = socket.gethostbyname(host_name)
-
-        # print(IP_address)
-        a = 2
-        b = 3
-        c = a + b
-        print(c)
-        
     def myIPAddress():
         
-        # global IP_address
         # host_name = socket.gethostname()
-        # IP_address = socket.gethostbyname(host_name)
+        IP_address = socket.gethostbyname()
 
-        # print(IP_address)
-        ip = str(ipad())
-        result.setText(str(ip))
-        print(ip)
+        print(IP_address)
+        # print(host_name)
+        result.setText(IP_address)
+        
         
     
     

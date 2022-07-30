@@ -1,6 +1,6 @@
 import sys
 import math
-from unittest import result
+
 import sympy as sy
 import numpy as np
 from PyQt5.QtWidgets import * 
@@ -42,12 +42,12 @@ class Window(QMainWindow):
         
         
         # Creating a left frame 
-        main_frame = QFrame(self) 
-        main_frame.resize(1445, 970)
-        main_frame.move(30, 15)
-        main_frame.setFrameShape(QFrame.WinPanel)
-        main_frame.setFrameShadow(QFrame.Raised)
-        main_frame.setStyleSheet(
+        self.main_frame = QFrame(self) 
+        self.main_frame.resize(1445, 970)
+        self.main_frame.move(30, 15)
+        self.main_frame.setFrameShape(QFrame.WinPanel)
+        self.main_frame.setFrameShadow(QFrame.Raised)
+        self.main_frame.setStyleSheet(
             "border: 5px solid yellow;" +
             "background-color: white;" +
             "border-radius: 25px;" 
@@ -55,54 +55,54 @@ class Window(QMainWindow):
         )
         
         # Creating a frame for title
-        title_frame = QFrame(main_frame)
-        title_frame.resize(1425, 90)
-        title_frame.move(10, 15)
-        title_frame.setFrameShape(QFrame.WinPanel)
-        title_frame.setFrameShadow(QFrame.Raised)
-        title_frame.setStyleSheet(
+        self.title_frame = QFrame(self.main_frame)
+        self.title_frame.resize(1425, 90)
+        self.title_frame.move(10, 15)
+        self.title_frame.setFrameShape(QFrame.WinPanel)
+        self.title_frame.setFrameShadow(QFrame.Raised)
+        self.title_frame.setStyleSheet(
             "background-color: white;"  +
             "border-radius: 25px;"
         )
         
         # Creating a right frame 
-        right_vert_frame = QFrame(main_frame)
-        right_vert_frame.resize(650, 830)
-        right_vert_frame.move(770, 120)
-        right_vert_frame.setFrameShape(QFrame.WinPanel)
-        right_vert_frame.setFrameShadow(QFrame.Raised)
-        right_vert_frame.setStyleSheet(
+        self.right_vert_frame = QFrame(self.main_frame)
+        self.right_vert_frame.resize(650, 830)
+        self.right_vert_frame.move(770, 120)
+        self.right_vert_frame.setFrameShape(QFrame.WinPanel)
+        self.right_vert_frame.setFrameShadow(QFrame.Raised)
+        self.right_vert_frame.setStyleSheet(
             "border: 5px solid yellow;" +
             "background-color: white;" +
             "border-radius: 25px;" 
         )
         
-        top_horiz_frame = QFrame(main_frame)
-        top_horiz_frame.resize(750, 400)
-        top_horiz_frame.move(10, 120)
-        top_horiz_frame.setFrameShape(QFrame.WinPanel)
-        top_horiz_frame.setFrameShadow(QFrame.Raised)
-        top_horiz_frame.setStyleSheet(
+        self.top_horiz_frame = QFrame(self.main_frame)
+        self.top_horiz_frame.resize(750, 400)
+        self.top_horiz_frame.move(10, 120)
+        self.top_horiz_frame.setFrameShape(QFrame.WinPanel)
+        self.top_horiz_frame.setFrameShadow(QFrame.Raised)
+        self.top_horiz_frame.setStyleSheet(
             "border: 5px solid yellow;" +
             "background-color: white;" +
             "border-radius: 25px;" 
         )
         
-        bottom_horiz_frame = QFrame(main_frame)
-        bottom_horiz_frame.resize(750, 400)
-        bottom_horiz_frame.move(10, 550)
-        bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
-        bottom_horiz_frame.setFrameShadow(QFrame.Raised)
-        bottom_horiz_frame.setStyleSheet(
+        self.bottom_horiz_frame = QFrame(self.main_frame)
+        self.bottom_horiz_frame.resize(750, 400)
+        self.bottom_horiz_frame.move(10, 550)
+        self.bottom_horiz_frame.setFrameShape(QFrame.WinPanel)
+        self.bottom_horiz_frame.setFrameShadow(QFrame.Raised)
+        self.bottom_horiz_frame.setStyleSheet(
             "border: 5px solid yellow;" +
             "background-color: white;" +
             "border-radius: 25px;" 
         )
         
         # creating a button to show the IP address
-        myIP_button = QPushButton("My IP address", right_vert_frame)
-        myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
-        myIP_button.setStyleSheet(
+        self.myIP_button = QPushButton("My IP address", self.right_vert_frame)
+        self.myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+        self.myIP_button.setStyleSheet(
                                     "*{border: 5px solid '#BC006C';" +
                                     "border-radius: 45px;" +
                                     "color: 'white';" +
@@ -111,7 +111,7 @@ class Window(QMainWindow):
         ) # setting border style
     
         # setting geometry to the push button
-        myIP_button.setGeometry(50, 300, 200, 40)
+        self.myIP_button.setGeometry(50, 300, 200, 40)
         # adding action to the button
         
         
@@ -120,9 +120,9 @@ class Window(QMainWindow):
     
     
         # creating a button to show the IP address
-        exit_button = QPushButton("Exit", right_vert_frame)
-        exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
-        exit_button.setStyleSheet(
+        self.exit_button = QPushButton("Exit", self.right_vert_frame)
+        self.exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+        self.exit_button.setStyleSheet(
                                     "*{border: 5px solid '#BC006C';" +
                                     "border-radius: 45px;" +
                                     "color: 'black';" +
@@ -131,42 +131,41 @@ class Window(QMainWindow):
         ) # setting border style
     
         # setting geometry to the exit button
-        exit_button.setGeometry(50, 350, 200, 40)
+        self.exit_button.setGeometry(50, 350, 200, 40)
         
         
         # Creating a label to show the result
         
-        result = QLabel(top_horiz_frame)
-        result.setAlignment(Qt.AlignCenter)
-        result.setGeometry(90, 210, 800, 60)
-        result.setStyleSheet("QLabel"
+        self.result = QLabel(self.top_horiz_frame)
+        self.result.setAlignment(Qt.AlignCenter)
+        self.result.setGeometry(90, 210, 800, 60)
+        self.result.setStyleSheet("QLabel"
                                     "{"
                                     "border : 3px solid black;"
                                     "background : white;"
                                     "}")
-        result.setFont(QFont('Arial', 11))
+        self.result.setFont(QFont('Arial', 11))
         
         def myIPAddress():
             
-            global myIPAddress
+            
             host_name = socket.gethostname()
             IP_address = socket.gethostbyname(host_name)
 
             print(IP_address)
+            self.result.setText(IP_address)
             
-        ip = myIPAddress()
-        result.setText(str(ip))
-        print(ip)
+    
         
     
     
     
         # creating function to close the window
-        def close_window():
+        def close_window(self):
             self.close()
         
-        myIP_button.clicked.connect(myIPAddress)
-        exit_button.clicked.connect(close_window)
+        self.myIP_button.clicked.connect(myIPAddress)
+        self.exit_button.clicked.connect(close_window)
             
 # create pyqt5 app
 App = QApplication(sys.argv)
