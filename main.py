@@ -124,7 +124,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    myHostName_button.setGeometry(50, 400, 200, 40)
+    myHostName_button.setGeometry(50, 350, 200, 40)
     myHostName_button.clicked.connect(myHostName)
     
     # creating a button to exit the program
@@ -137,7 +137,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-    exit_button.setGeometry(50, 350, 200, 40)
+    exit_button.setGeometry(50, 400, 200, 40)
     exit_button.clicked.connect(close_window)
      
      
