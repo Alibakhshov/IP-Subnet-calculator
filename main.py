@@ -110,11 +110,11 @@ class MainWindow():
     myIP_button = QPushButton("My IP address", right_vert_frame)
     myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     myIP_button.setStyleSheet(
-        "*{border: 5px solid '#BC006C';" +
-        "border-radius: 45px;" +
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
         "color: 'white';" +
         "font-size: 20px;}" +
-        "*:hover{background: '#696969';}"           
+        "*:hover{background: '#2F4F4F';}"           
     ) # setting border style
   
     # setting geometry to the push button
