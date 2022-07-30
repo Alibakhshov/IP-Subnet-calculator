@@ -61,6 +61,7 @@ class MainWindow():
             binary_number = int(binary_number/10)
         #display the decimal value
         print("Decimal number is  ", decimal_value)
+        result.setText(decimal_value)
     
     # creating function to close the window
     def close_window():
@@ -152,7 +153,7 @@ class MainWindow():
     myHostName_button.clicked.connect(myHostName)
     
     # creating a button to convert binary to decimal
-    binToDec_button = QPushButton("My hostname", right_vert_frame)
+    binToDec_button = QPushButton("Calculate", right_vert_frame)
     binToDec_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     binToDec_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
@@ -161,7 +162,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    binToDec_button.setGeometry(50, 350, 200, 40)
+    binToDec_button.setGeometry(50, 450, 200, 40)
     binToDec_button.clicked.connect(BinToDec)
     
     # creating a button to exit the program
