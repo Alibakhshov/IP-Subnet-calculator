@@ -1,5 +1,11 @@
 # importing from packages fromPyQt5
-from PyQt5.QtWidgets import QApplication, QWidget, QFrame, QLabel, QPushButton
+from PyQt5.QtWidgets import (
+QApplication, 
+QWidget,
+QFrame, 
+QLabel, 
+QPushButton,
+QLineEdit,)
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
@@ -169,7 +175,7 @@ class MainWindow():
     )
     result.setFont(QFont('Arial', 11))
     
-    
+    binToDec_input = QLineEdit
     
    
     
