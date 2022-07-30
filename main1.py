@@ -1,5 +1,6 @@
 import sys
 import math
+from unittest import result
 import sympy as sy
 import numpy as np
 from PyQt5.QtWidgets import * 
@@ -13,6 +14,7 @@ class Window(QMainWindow):
     def __init__(self):
         super().__init__()
         global result
+        
         self.setWindowTitle("IP Subnet Calculator")
         win_width = 1500
         win_height = 1000
@@ -111,7 +113,7 @@ class Window(QMainWindow):
         # setting geometry to the push button
         myIP_button.setGeometry(50, 300, 200, 40)
         # adding action to the button
-        myIP_button.clicked.connect(myIPAddress)
+        
         
         
         
@@ -130,7 +132,7 @@ class Window(QMainWindow):
     
         # setting geometry to the exit button
         exit_button.setGeometry(50, 350, 200, 40)
-        exit_button.clicked.connect(close_window)
+        
         
         # Creating a label to show the result
         
@@ -146,14 +148,14 @@ class Window(QMainWindow):
         
         def myIPAddress():
             
-            
+            global myIPAddress
             host_name = socket.gethostname()
             IP_address = socket.gethostbyname(host_name)
 
             print(IP_address)
             
         ip = str(myIPAddress())
-        result.setText(str(ip))
+        result.setText(ip)
         print(ip)
         
     
@@ -163,7 +165,8 @@ class Window(QMainWindow):
         def close_window():
             self.close()
         
-            
+        myIP_button.clicked.connect(myIPAddress)
+        exit_button.clicked.connect(close_window)
             
 # create pyqt5 app
 App = QApplication(sys.argv)
