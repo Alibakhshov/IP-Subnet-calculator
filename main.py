@@ -37,23 +37,23 @@ class MainWindow():
         print(host_name)
         result.setText(host_name)
         
-    def BinToDec():
-        #get an binary number input from  user
-        binary_number = int(input("Enter the Binary Number: "))
-        #create a decimal variable and set to 0
-        decimal_value=0
-        #initialize a variable i and set to 1
-        i = 1
-        #get the length of the binary number
-        length = len(str(binary_number))
-        #logic to convert binary to decimal
-        for k in range(length):
-            reminder = binary_number % 10
-            decimal_value = decimal_value + (reminder * i)
-            i = i * 2
-            binary_number = int(binary_number/10)
-        #display the decimal value
-        print("Decimal number is  ", decimal_value)
+    # def BinToDec():
+    #     #get an binary number input from  user
+    #     binary_number = int(input("Enter the Binary Number: "))
+    #     #create a decimal variable and set to 0
+    #     decimal_value=0
+    #     #initialize a variable i and set to 1
+    #     i = 1
+    #     #get the length of the binary number
+    #     length = len(str(binary_number))
+    #     #logic to convert binary to decimal
+    #     for k in range(length):
+    #         reminder = binary_number % 10
+    #         decimal_value = decimal_value + (reminder * i)
+    #         i = i * 2
+    #         binary_number = int(binary_number/10)
+    #     #display the decimal value
+    #     print("Decimal number is  ", decimal_value)
     
     # creating function to close the window
     def close_window():
