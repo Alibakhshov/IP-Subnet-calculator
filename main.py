@@ -112,7 +112,7 @@ class MainWindow():
     myIP_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
         "border-radius: 25px;" +
-        "color: 'white';" +
+        "color: 'black';" +
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"           
     ) # setting border style
@@ -126,11 +126,11 @@ class MainWindow():
     myIP_button = QPushButton("My hostname", right_vert_frame)
     myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     myIP_button.setStyleSheet(
-                                "*{border: 5px solid '#BC006C';" +
-                                "border-radius: 45px;" +
-                                "color: 'white';" +
-                                "font-size: 20px;}" +
-                                "*:hover{background: '#BC006C';}"           
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
+        "color: 'black';" +
+        "font-size: 20px;}" +
+        "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
   
     # setting geometry to the push button
@@ -145,11 +145,11 @@ class MainWindow():
     exit_button = QPushButton("Exit", right_vert_frame)
     exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     exit_button.setStyleSheet(
-                                "*{border: 5px solid '#BC006C';" +
-                                "border-radius: 45px;" +
-                                "color: 'black';" +
-                                "font-size: 20px;}" +
-                                "*:hover{background: '#BC006C';}"           
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
+        "color: 'black';" +
+        "font-size: 20px;}" +
+        "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
   
     # setting geometry to the exit button
