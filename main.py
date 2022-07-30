@@ -55,7 +55,7 @@ class MainWindow():
     main_frame.setFrameShape(QFrame.WinPanel)
     main_frame.setFrameShadow(QFrame.Raised)
     main_frame.setStyleSheet(
-        "border: 5px solid yellow;" +
+        "border: 5px solid black;" +
         "background-color: white;" +
         "border-radius: 25px;" 
         
