@@ -12,7 +12,7 @@ class Window(QMainWindow):
       
     def __init__(self):
         super().__init__()
-    
+        global result
         self.setWindowTitle("IP Subnet Calculator")
         win_width = 1500
         win_height = 1000
@@ -34,27 +34,10 @@ class Window(QMainWindow):
         
     def MainWindow(self):
         
-        global result
+    
         
         
-        def myIPAddress():
-            
-            global IP_address
-            host_name = socket.gethostname()
-            IP_address = socket.gethostbyname(host_name)
-
-            print(IP_address)
-            
-        ip = str(myIPAddress())
-        result.setText(str(ip))
-        print(ip)
         
-    
-    
-    
-        # creating function to close the window
-        def close_window():
-            self.close()
         
         # Creating a left frame 
         main_frame = QFrame(self) 
@@ -161,6 +144,24 @@ class Window(QMainWindow):
                                     "}")
         result.setFont(QFont('Arial', 11))
         
+        def myIPAddress():
+            
+            
+            host_name = socket.gethostname()
+            IP_address = socket.gethostbyname(host_name)
+
+            print(IP_address)
+            
+        ip = str(myIPAddress())
+        result.setText(str(ip))
+        print(ip)
+        
+    
+    
+    
+        # creating function to close the window
+        def close_window():
+            self.close()
         
             
             
