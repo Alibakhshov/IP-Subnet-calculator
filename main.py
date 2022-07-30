@@ -122,6 +122,21 @@ class MainWindow():
     # adding action to the button
     myIP_button.clicked.connect(myIPAddress)
     
+    # creating a button to show the hostname
+    myIP_button = QPushButton("My hostname", right_vert_frame)
+    myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    myIP_button.setStyleSheet(
+                                "*{border: 5px solid '#BC006C';" +
+                                "border-radius: 45px;" +
+                                "color: 'white';" +
+                                "font-size: 20px;}" +
+                                "*:hover{background: '#BC006C';}"           
+    ) # setting border style
+  
+    # setting geometry to the push button
+    myIP_button.setGeometry(50, 400, 200, 40)
+    # adding action to the button
+    myIP_button.clicked.connect(myHostName)
     
     
   
