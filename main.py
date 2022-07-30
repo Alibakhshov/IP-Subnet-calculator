@@ -159,12 +159,11 @@ class MainWindow():
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(90, 210, 800, 60)
-    result.setStyleSheet("QLabel"
-                                  "{"
-                                  "border : 3px solid black;"
-                                  "background : white;"
-                                  "}")
+    result.setGeometry(20, 170, 700, 60)
+    result.setStyleSheet(
+        "background-color: white;" +
+        "border-color: white;"
+    )
     result.setFont(QFont('Arial', 11))
     
     
