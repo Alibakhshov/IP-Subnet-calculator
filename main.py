@@ -104,15 +104,17 @@ class MainWindow():
             
     def globalFind():
         
-        global_label = QLabel("Is Global: ", top_horiz_frame)
-        global_label.setGeometry(5, 10, 500, 100)
-        global_label.setStyleSheet(
-            "background-color: white;" +
-            "border-color: white;" + 
-            "font: 35px;"
-        )
-        # ip = ipaddress.IPv4Address(global_input.text())
-        # result.setText(str(ip.is_global))
+        # global_label = QLabel("Is Global: ", top_horiz_frame)
+        # global_label.setGeometry(5, 10, 500, 100)
+        
+        # global_label.setStyleSheet(
+        #     "background-color: white;" +
+        #     "border-color: white;" + 
+        #     "font: 35px;"
+        # )
+        ip = ipaddress.IPv4Address(global_input.text())
+        result.setText(str(ip.is_global))
+        result.setText(print("Is global:", ip.is_global))
         # result.setText(str(ip.is_link_local))
         # print("Is global:", ip.is_global)
         # print("Is link-local:", ip.is_link_local)
