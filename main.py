@@ -99,10 +99,9 @@ class MainWindow():
             dec_result = (bin(dec_number)[2:])
             result.setText(str(dec_result))
             
-        
-        
-        
-        
+    def Clear():
+        decToBin_input.setText('')
+        binToDec_input.setText('')
         
     
     # creating function to close the window
@@ -219,6 +218,19 @@ class MainWindow():
     ) # setting border style
     DecToBin_button.setGeometry(50, 500, 200, 40)
     DecToBin_button.clicked.connect(DecToBin)
+    
+    # creating a button to clear all the inputs
+    clear_button = QPushButton("Clear", right_vert_frame)
+    clear_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    clear_button.setStyleSheet(
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
+        "color: 'black';" +
+        "font-size: 20px;}" +
+        "*:hover{background: '#2F4F4F';}"            
+    ) # setting border style
+    clear_button.setGeometry(50, 550, 200, 40)
+    clear_button.clicked.connect(Clear)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
