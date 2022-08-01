@@ -12,6 +12,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
 import socket
+import ipaddress
 
 from numpy import number
 
@@ -32,6 +33,8 @@ class MainWindow():
     global result
     global binToDec_input
     global decToBin_input 
+    global global_input
+    
     
     def myIPAddress():
         
@@ -98,6 +101,10 @@ class MainWindow():
             dec_number = int(decToBin_input.text())
             dec_result = (bin(dec_number)[2:])
             result.setText(str(dec_result))
+            
+    def globalFind():
+        ip = ipaddress.IPv4Address(global_input.text())
+        result.setText(str(ip))
             
     def Clear():
         decToBin_input.setText('')
@@ -305,6 +312,15 @@ class MainWindow():
         "border-radius: 0px;"
     )
     decToBin_input.setGeometry(400, 100, 300, 60)
+    
+    
+    # creating an input space to check whether the IP address global or not
+    global_input = QLineEdit(bottom_horiz_frame)
+    global_input.setStyleSheet(
+        "font: 25px;" + 
+        "border-radius: 0px;"
+    )
+    global_input.setGeometry(400, 170, 300, 60)
     
     
     # Creating a title for the calculator

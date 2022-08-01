@@ -1,3 +1,4 @@
 python.exe -m pip install --upgrade pip
 PyQt5
 socket
+ipaddress
