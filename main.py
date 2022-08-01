@@ -68,8 +68,8 @@ class MainWindow():
                 "font: 55px;" +
                 "color: red;"
             )
-        elif  count_bin_num < 8:
-            result.setText("Binary numbers should \nnot be less than 8 digits")
+        elif count_bin_num > 8:
+            result.setText("Binary numbers should \nnot be greater than 8 digits")
             result.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
