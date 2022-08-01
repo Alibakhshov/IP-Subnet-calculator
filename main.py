@@ -241,8 +241,8 @@ class MainWindow():
     
     # Creating a label to for converting binary to decimal
     decToBin_label = QLabel("Enter binary number", bottom_horiz_frame)
-    decToBin_label.setAlignment(Qt.AlignCenter)
-    decToBin_label.setGeometry(10, 5, 500, 100)
+    # decToBin_label.setAlignment(Qt.AlignCenter)
+    decToBin_label.setGeometry(5, 5, 500, 100)
     decToBin_label.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -255,7 +255,8 @@ class MainWindow():
     # creating an input space for converting binary to decimal
     binToDec_input = QLineEdit(bottom_horiz_frame)
     binToDec_input.setStyleSheet(
-        "font: 25px;"
+        "font: 25px;" +
+        "border-radius: 30px;"
     )
     binToDec_input.setGeometry(330, 30, 400, 60)
     
