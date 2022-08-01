@@ -240,9 +240,9 @@ class MainWindow():
     result.setFont(QFont('Arial', 11))
     
     # Creating a label to for converting binary to decimal
-    decToBin_label = QLabel("Enter binary number", top_horiz_frame)
+    decToBin_label = QLabel("Enter binary number", bottom_horiz_frame)
     decToBin_label.setAlignment(Qt.AlignCenter)
-    decToBin_label.setGeometry(20, 120, 700, 200)
+    decToBin_label.setGeometry(10, 5, 700, 200)
     decToBin_label.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
