@@ -239,12 +239,32 @@ class MainWindow():
     )
     result.setFont(QFont('Arial', 11))
     
+    # Creating a label to for converting binary to decimal
+    result = QLabel(top_horiz_frame)
+    result.setAlignment(Qt.AlignCenter)
+    result.setGeometry(20, 120, 700, 200)
+    result.setStyleSheet(
+        "background-color: white;" +
+        "border-color: white;" + 
+        "font: 55px;"
+    )
+    result.setFont(QFont('Arial', 11))
+    
+    
+    
     # creating an input space for converting binary to decimal
     binToDec_input = QLineEdit(bottom_horiz_frame)
     binToDec_input.setStyleSheet(
         "font: 25px;"
     )
     binToDec_input.setGeometry(330, 30, 400, 60)
+    
+    # creating an input space for converting decimal to binary
+    decToBin_input = QLineEdit(bottom_horiz_frame)
+    decToBin_input.setStyleSheet(
+        "font: 25px;"
+    )
+    decToBin_input.setGeometry(330, 100, 400, 60)
     
     
     # Creating a title for the calculator
