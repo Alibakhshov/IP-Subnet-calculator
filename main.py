@@ -232,18 +232,18 @@ class MainWindow():
     clear_button.setGeometry(50, 550, 200, 40)
     clear_button.clicked.connect(Clear)
     
-    # creating a button to find whether the IP is global or not
-    clear_button = QPushButton("Clear", right_vert_frame)
-    clear_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
-    clear_button.setStyleSheet(
+    # creating a button to find whether the IP is global or not. If it is global it prints True
+    global_button = QPushButton("Clear", right_vert_frame)
+    global_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    global_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
         "border-radius: 25px;" +
         "color: 'black';" +
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    clear_button.setGeometry(50, 550, 200, 40)
-    clear_button.clicked.connect(Clear)
+    global_button.setGeometry(50, 550, 200, 40)
+    global_button.clicked.connect(Clear)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
