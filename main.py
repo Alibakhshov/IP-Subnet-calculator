@@ -233,7 +233,7 @@ class MainWindow():
     clear_button.clicked.connect(Clear)
     
     # creating a button to find whether the IP is global or not. If it is global it prints True
-    global_button = QPushButton("Clear", right_vert_frame)
+    global_button = QPushButton("Global", right_vert_frame)
     global_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     global_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
@@ -242,7 +242,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    global_button.setGeometry(50, 550, 200, 40)
+    global_button.setGeometry(50, 600, 200, 40)
     global_button.clicked.connect(Clear)
     
     # creating a button to exit the program
