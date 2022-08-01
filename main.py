@@ -47,10 +47,7 @@ class MainWindow():
         print(host_name)
         result.setText(host_name)
         
-    def BinToDec():
-        
-        
-                        
+    def BinToDec():         
         binary_number = int(binToDec_input.text())
         count_bin_num = 0
         while(binary_number > 0):
@@ -59,8 +56,7 @@ class MainWindow():
         print("The number of digits in the number are:", count_bin_num)
                       
         
-        
-        if binToDec_input.text() == '':
+        if binToDec_input.text() == '' or :
             result.setText("Please fill in all \n required entry fields")
             result.setStyleSheet(
                 "background-color: white;" +
@@ -94,7 +90,8 @@ class MainWindow():
                 "border-color: white;" + 
                 "font: 55px;" 
             )
-            
+    def DecToBin():
+        dec_number = int(binToDec_input.text())
         
         
         
