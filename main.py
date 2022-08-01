@@ -50,38 +50,38 @@ class MainWindow():
     def BinToDec():
         
         
-        
-        
-        # if binToDec_input.text() == '':
-        #     result.setText("Please fill in all \n required entry fields")
-        #     result.setStyleSheet(
-        #         "background-color: white;" +
-        #         "border-color: white;" + 
-        #         "font: 55px;" +
-        #         "color: red;"
-        #     )
-        # else:
-        #     binary_number = int(binToDec_input.text())
-        #     decimal_value=0
-        #     a = 1
-        #     length = len(str(binary_number))
-        #     for i in range(length):
-        #         reminder = binary_number % 10
-        #         decimal_value = decimal_value + (reminder * a)
-        #         a = a * 2
-        #         binary_number = int(binary_number/10)
-        #     #display the decimal value
-        #     print("Decimal number is  ", decimal_value)
-        #     result.setText(str(decimal_value))
-            
-            binary_number = int(binToDec_input.text())
-            count = 0
-            while(binary_number > 0):
-                count = count + 1
-                binary_number = binary_number // 10
-            print("The number of digits in the number are:", count)
-                    
                         
+        
+        
+        if binToDec_input.text() == '':
+            result.setText("Please fill in all \n required entry fields")
+            result.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+        else:
+            binary_number = int(binToDec_input.text())
+            decimal_value=0
+            a = 1
+            length = len(str(binary_number))
+            for i in range(length):
+                reminder = binary_number % 10
+                decimal_value = decimal_value + (reminder * a)
+                a = a * 2
+                binary_number = int(binary_number/10)
+            #display the decimal value
+            print("Decimal number is  ", decimal_value)
+            result.setText(str(decimal_value))
+            
+        binary_number = int(binToDec_input.text())
+        count = 0
+        while(binary_number > 0):
+            count = count + 1
+            binary_number = binary_number // 10
+        print("The number of digits in the number are:", count)
+                      
         
         
         
