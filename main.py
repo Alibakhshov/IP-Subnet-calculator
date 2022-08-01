@@ -104,8 +104,8 @@ class MainWindow():
             
     def globalFind():
         ip = ipaddress.IPv4Address(global_input.text())
-        result.setText(str(ip))
-        print(ip)
+        result.setText(str(ip.is_global))
+        print(ip, ip.is_global)
             
     def Clear():
         decToBin_input.setText('')
@@ -251,7 +251,7 @@ class MainWindow():
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
     global_button.setGeometry(50, 600, 200, 40)
-    global_button.clicked.connect(Clear)
+    global_button.clicked.connect(globalFind)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
