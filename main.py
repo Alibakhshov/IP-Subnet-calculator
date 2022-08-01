@@ -268,16 +268,17 @@ class MainWindow():
     binToDec_input = QLineEdit(bottom_horiz_frame)
     binToDec_input.setStyleSheet(
         "font: 25px;" +
-        "border-radius: 30px;"
+        "border-radius: 0px;"
     )
-    binToDec_input.setGeometry(360, 30, 300, 60)
+    binToDec_input.setGeometry(400, 30, 300, 60)
     
     # creating an input space for converting decimal to binary
     decToBin_input = QLineEdit(bottom_horiz_frame)
     decToBin_input.setStyleSheet(
-        "font: 25px;"
+        "font: 25px;" + 
+        "border-radius: 0px;"
     )
-    decToBin_input.setGeometry(330, 100, 300, 60)
+    decToBin_input.setGeometry(400, 100, 300, 60)
     
     
     # Creating a title for the calculator
