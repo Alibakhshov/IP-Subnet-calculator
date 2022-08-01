@@ -1,8 +1,7 @@
-b_num = list(input("Input a binary number: "))
-value = 0
-
-for i in range(len(b_num)):
-	digit = b_num.pop()
-	if digit == '1':
-		value = value + pow(2, i)
-print("The decimal value of the number is", value)
+n=int(input("Enter number:"))
+            count=0.
+            while(n>0):
+                count=count+1.
+                n=n//10.
+            print("The number of digits in the number are:",count)
+                    
