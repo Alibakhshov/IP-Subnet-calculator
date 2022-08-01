@@ -34,7 +34,7 @@ class MainWindow():
     global binToDec_input
     global decToBin_input 
     global global_input
-    
+    global top_horiz_frame
     
     def myIPAddress():
         
@@ -104,18 +104,18 @@ class MainWindow():
             
     def globalFind():
         
-        global_label = QLabel("Enter decimal number", bottom_horiz_frame)
-        global_label.setGeometry(5, 80, 500, 100)
+        global_label = QLabel("Is Global: ", top_horiz_frame)
+        global_label.setGeometry(5, 10, 500, 100)
         global_label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
             "font: 35px;"
         )
-        ip = ipaddress.IPv4Address(global_input.text())
-        result.setText(str(ip.is_global))
-        result.setText(str(ip.is_link_local))
-        print("Is global:", ip.is_global)
-        print("Is link-local:", ip.is_link_local)
+        # ip = ipaddress.IPv4Address(global_input.text())
+        # result.setText(str(ip.is_global))
+        # result.setText(str(ip.is_link_local))
+        # print("Is global:", ip.is_global)
+        # print("Is link-local:", ip.is_link_local)
             
     def Clear():
         decToBin_input.setText('')
@@ -280,7 +280,7 @@ class MainWindow():
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(20, 120, 700, 200)
+    result.setGeometry(10, 10, 730, 380)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
