@@ -76,7 +76,7 @@ class MainWindow():
             
             binary_number = int(binToDec_input.text())
             count = 0
-            while(binary_number>0):
+            while(binary_number > 0):
                 count = count + 1
                 binary_number = binary_number // 10
             print("The number of digits in the number are:", count)
