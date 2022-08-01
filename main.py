@@ -105,6 +105,7 @@ class MainWindow():
     def globalFind():
         ip = ipaddress.IPv4Address(global_input.text())
         result.setText(str(ip))
+        print(ip)
             
     def Clear():
         decToBin_input.setText('')
