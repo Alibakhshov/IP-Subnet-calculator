@@ -245,9 +245,9 @@ class MainWindow():
     result.setFont(QFont('Arial', 11))
     
     # Creating a label to for converting binary to decimal
-    decToBin_label = QLabel("Enter binary number", bottom_horiz_frame)
-    decToBin_label.setGeometry(5, 5, 500, 100)
-    decToBin_label.setStyleSheet(
+    binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
+    binToDec_label.setGeometry(5, 5, 500, 100)
+    binToDec_label.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
         "font: 35px;"
@@ -255,8 +255,8 @@ class MainWindow():
     # decToBin_label.setFont(QFont('Arial', 11))
     
      # Creating a label to for converting decimal to binary
-    decToBin_label = QLabel("Enter binary number", bottom_horiz_frame)
-    decToBin_label.setGeometry(5, 5, 500, 100)
+    decToBin_label = QLabel("Enter decimal number", bottom_horiz_frame)
+    decToBin_label.setGeometry(5, 80, 500, 100)
     decToBin_label.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -277,7 +277,7 @@ class MainWindow():
     decToBin_input.setStyleSheet(
         "font: 25px;"
     )
-    decToBin_input.setGeometry(330, 100, 400, 60)
+    decToBin_input.setGeometry(330, 100, 300, 60)
     
     
     # Creating a title for the calculator
