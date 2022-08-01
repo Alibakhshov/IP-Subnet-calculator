@@ -113,8 +113,8 @@ class MainWindow():
         #     "font: 35px;"
         # )
         ip = ipaddress.IPv4Address(global_input.text())
-        result.setText(str("Is global", ip.is_global))
-        result.setText("Is global:")
+        result.setText(str(ip.is_global))
+        result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
         # print("Is global:", ip.is_global)
@@ -129,7 +129,7 @@ class MainWindow():
     def close_window():
         app.close()
         
-    
+#------------------------------------------------------FRAMES--------------------------------    
     # Creating a left frame 
     main_frame = QFrame(window) 
     main_frame.resize(1445, 970)
@@ -187,6 +187,8 @@ class MainWindow():
         "background-color: white;" +
         "border-radius: 25px;" 
     )
+    
+    #----------------------------------------------------BUTTONS--------------------------------------
     
     # creating a button to show the IP address
     myIP_button = QPushButton("My IP address", right_vert_frame)
@@ -279,6 +281,7 @@ class MainWindow():
     exit_button.setGeometry(50, 400, 200, 40)
     exit_button.clicked.connect(close_window)
      
+    #----------------------------------------------LABELS-------------------------------------- 
      
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
@@ -310,6 +313,7 @@ class MainWindow():
         "font: 35px;"
     )
     
+    #-----------------------------------------------INPUTS-------------------------------------------
     
     # creating an input space for converting binary to decimal
     binToDec_input = QLineEdit(bottom_horiz_frame)
