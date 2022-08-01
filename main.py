@@ -113,8 +113,9 @@ class MainWindow():
         #     "font: 35px;"
         # )
         ip = ipaddress.IPv4Address(global_input.text())
-        result.setText(str(ip.is_global))
-        result.setText(print("Is global:", ip.is_global))
+        result.setText(str("Is global", ip.is_global))
+        result.setText("Is global:")
+        
         # result.setText(str(ip.is_link_local))
         # print("Is global:", ip.is_global)
         # print("Is link-local:", ip.is_link_local)
@@ -281,12 +282,12 @@ class MainWindow():
      
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
-    result.setAlignment(Qt.AlignCenter)
+    # result.setAlignment(Qt.AlignCenter)
     result.setGeometry(10, 10, 730, 380)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
-        "font: 55px;"
+        "font: 15px;"
     )
     result.setFont(QFont('Arial', 11))
     
