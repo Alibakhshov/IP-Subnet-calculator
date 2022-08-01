@@ -92,6 +92,8 @@ class MainWindow():
             )
     def DecToBin():
         dec_number = int(binToDec_input.text())
+        dec_result = (bin(dec_number)[2:])
+        result.setText(str(dec_result))
         
         
         
@@ -187,7 +189,7 @@ class MainWindow():
     myHostName_button.clicked.connect(myHostName)
     
     # creating a button to convert binary to decimal
-    binToDec_button = QPushButton("Decimal", right_vert_frame)
+    binToDec_button = QPushButton("To Decimal", right_vert_frame)
     binToDec_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     binToDec_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
@@ -200,7 +202,7 @@ class MainWindow():
     binToDec_button.clicked.connect(BinToDec)
     
     # creating a button to convert decimal to binary
-    DecToBin_button = QPushButton("Binary", right_vert_frame)
+    DecToBin_button = QPushButton("To Binary", right_vert_frame)
     DecToBin_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     DecToBin_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
@@ -210,7 +212,7 @@ class MainWindow():
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
     DecToBin_button.setGeometry(50, 500, 200, 40)
-    DecToBin_button.clicked.connect(BinToDec)
+    DecToBin_button.clicked.connect(DecToBin)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
