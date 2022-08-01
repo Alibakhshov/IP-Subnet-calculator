@@ -1,5 +1,5 @@
 # importing from packages fromPyQt5
-from itertools import count
+
 from PyQt5.QtWidgets import (
 QApplication, 
 QWidget,
@@ -48,28 +48,33 @@ class MainWindow():
         result.setText(host_name)
         
     def BinToDec():
-        binary_number = int(binToDec_input.text())
-        decimal_value=0
-        a = 1
-        length = len(str(binary_number))
-        for i in range(length):
-            reminder = binary_number % 10
-            decimal_value = decimal_value + (reminder * a)
-            a = a * 2
-            binary_number = int(binary_number/10)
-        #display the decimal value
-        print("Decimal number is  ", decimal_value)
-        result.setText(str(decimal_value))
+        
+        
+        
         
         if binToDec_input.text() == '':
-            print("Error")
-        
-        # count = 0
-        # while binary_number != 0:
-        #     binary_number //= 10
-        #     count += 1
+            result.setText("Please fill in all \n required entry fields")
+        else:
+            binary_number = int(binToDec_input.text())
+            decimal_value=0
+            a = 1
+            length = len(str(binary_number))
+            for i in range(length):
+                reminder = binary_number % 10
+                decimal_value = decimal_value + (reminder * a)
+                a = a * 2
+                binary_number = int(binary_number/10)
+            #display the decimal value
+            print("Decimal number is  ", decimal_value)
+            result.setText(str(decimal_value))
+            count = 0
+            while binary_number != 0:
+                binary_number //= 10
+                count += 1
 
-        # print("Number of digits: " + str(count))
+            print("Number of digits: " + str(count))
+            
+        
         
         
         
@@ -194,7 +199,7 @@ class MainWindow():
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(20, 170, 700, 60)
+    result.setGeometry(20, 120, 700, 200)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
