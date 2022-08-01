@@ -52,16 +52,24 @@ class MainWindow():
         
                         
         binary_number = int(binToDec_input.text())
-        count = 0
+        count_bin_num = 0
         while(binary_number > 0):
-            count = count + 1
+            count_bin_num = count_bin_num + 1
             binary_number = binary_number // 10
-        print("The number of digits in the number are:", count)
+        print("The number of digits in the number are:", count_bin_num)
                       
         
         
-        if binToDec_input.text() == '' or count < 8:
+        if binToDec_input.text() == '':
             result.setText("Please fill in all \n required entry fields")
+            result.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+        elif  count_bin_num < 8:
+            result.setText("Binary numbers should be not less than 8 digits")
             result.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
