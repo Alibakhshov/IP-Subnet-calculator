@@ -122,7 +122,7 @@ class MainWindow():
     def Clear():
         decToBin_input.setText('')
         binToDec_input.setText('')
-        
+        global_input.setText('')
     
     # creating function to close the window
     def close_window():
