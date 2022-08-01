@@ -61,7 +61,7 @@ class MainWindow():
         print("Decimal number is  ", decimal_value)
         result.setText(str(decimal_value))
         
-        if int(binToDec_input.text()) == "":
+        if int(binToDec_input.text()) == '':
             print("Error")
         
         # count = 0
