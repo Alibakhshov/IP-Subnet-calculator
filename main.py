@@ -54,6 +54,12 @@ class MainWindow():
         
         if binToDec_input.text() == '':
             result.setText("Please fill in all \n required entry fields")
+            result.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
         else:
             binary_number = int(binToDec_input.text())
             decimal_value=0
