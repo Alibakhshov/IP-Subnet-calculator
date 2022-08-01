@@ -91,9 +91,15 @@ class MainWindow():
                 "font: 55px;" 
             )
     def DecToBin():
-        dec_number = int(binToDec_input.text())
-        dec_result = (bin(dec_number)[2:])
-        result.setText(str(dec_result))
+        
+        if int(binToDec_input.text()) == '':
+            result.setText("Please fill in all \n required entry fields")
+        else:
+            dec_number = int(binToDec_input.text())
+            dec_result = (bin(dec_number)[2:])
+            result.setText(str(dec_result))
+            
+        
         
         
         
@@ -258,7 +264,7 @@ class MainWindow():
         "font: 25px;" +
         "border-radius: 30px;"
     )
-    binToDec_input.setGeometry(330, 30, 400, 60)
+    binToDec_input.setGeometry(360, 30, 300, 60)
     
     # creating an input space for converting decimal to binary
     decToBin_input = QLineEdit(bottom_horiz_frame)
