@@ -31,6 +31,7 @@ class MainWindow():
     
     global result
     global binToDec_input
+    global decToBin_input 
     
     def myIPAddress():
         
@@ -91,10 +92,10 @@ class MainWindow():
             )
     def DecToBin():
         
-        if int(binToDec_input.text()) == '':
+        if int(decToBin_input.text()) == '':
             result.setText("Please fill in all \n required entry fields")
         else:
-            dec_number = int(binToDec_input.text())
+            dec_number = int(decToBin_input.text())
             dec_result = (bin(dec_number)[2:])
             result.setText(str(dec_result))
             
