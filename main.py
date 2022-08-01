@@ -55,7 +55,7 @@ class MainWindow():
             binary_number = binary_number // 10
         print("The number of digits in the number are:", count_bin_num)
                     
-        if int(binToDec_input.text()) == "":
+        if int(binToDec_input.text()) == "" or int(binToDec_input.text()) == '':
             result.setText("Please fill in all \n required entry fields")
             result.setStyleSheet(
                 "background-color: white;" +
@@ -246,7 +246,6 @@ class MainWindow():
     
     # Creating a label to for converting binary to decimal
     decToBin_label = QLabel("Enter binary number", bottom_horiz_frame)
-    # decToBin_label.setAlignment(Qt.AlignCenter)
     decToBin_label.setGeometry(5, 5, 500, 100)
     decToBin_label.setStyleSheet(
         "background-color: white;" +
