@@ -54,9 +54,8 @@ class MainWindow():
             count_bin_num = count_bin_num + 1
             binary_number = binary_number // 10
         print("The number of digits in the number are:", count_bin_num)
-                      
-        
-        if binToDec_input.text() == '':
+                    
+        if int(binToDec_input.text()) == "":
             result.setText("Please fill in all \n required entry fields")
             result.setStyleSheet(
                 "background-color: white;" +
