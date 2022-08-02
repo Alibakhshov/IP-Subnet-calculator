@@ -32,6 +32,7 @@ class MainWindow():
     )
     
     global result
+    global result0
     global binToDec_input
     global decToBin_input 
     global global_input
@@ -120,10 +121,11 @@ class MainWindow():
     def globalFind():
         
         
-       
+        # if info_about_ip_input.text() == '':
+            
         
         ip = ipaddress.IPv4Address(info_about_ip_input.text())
-        result.setText(str(ip.is_global))
+        result0.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
         result2.setText(str(ip.is_reserved))
         result3.setText(str(ip.is_multicast))
