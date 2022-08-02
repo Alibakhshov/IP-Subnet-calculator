@@ -304,7 +304,16 @@ class MainWindow():
     
     # Creating a label to show the result of link local
     result1 = QLabel(top_horiz_frame)
-    # result.setAlignment(Qt.AlignCenter)
+    result1.setGeometry(185, 65, 300, 50)
+    result1.setStyleSheet(
+        "background-color: white;" +
+        "border-color: black;" + 
+        "font: 30px;"
+    )
+    result1.setFont(QFont('Arial', 11))
+    
+    # Creating a label to show whether the given IP address is reserved or not
+    result1 = QLabel(top_horiz_frame)
     result1.setGeometry(185, 65, 300, 50)
     result1.setStyleSheet(
         "background-color: white;" +
@@ -352,7 +361,7 @@ class MainWindow():
     
     # prints Is reserved on the top horizontal frame
     reserved_label = QLabel(top_horiz_frame)
-    reserved_label.setGeometry(10, 65, 175, 50) 
+    reserved_label.setGeometry(10, 110, 175, 50) 
     reserved_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
