@@ -36,7 +36,8 @@ class MainWindow():
     global global_input
     global top_horiz_frame
     global global_label
-    
+    global link_local_label
+    global result1
     
     def myIPAddress():
         
@@ -115,8 +116,9 @@ class MainWindow():
         # )
         ip = ipaddress.IPv4Address(global_input.text())
         result.setText(str(ip.is_global))
-        
+        result1.setText(str(ip.is_link_local))
         global_label.setText("Is global: ")
+        link_local_label.setText("Is link local: ")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
@@ -292,13 +294,24 @@ class MainWindow():
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     # result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(150, 10, 300, 100)
+    result.setGeometry(150, 10, 300, 50)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
         "font: 30px;"
     )
     result.setFont(QFont('Arial', 11))
+    
+    # Creating a label to show the result of link local
+    result1 = QLabel(top_horiz_frame)
+    # result.setAlignment(Qt.AlignCenter)
+    result1.setGeometry(250, 110, 300, 50)
+    result1.setStyleSheet(
+        "background-color: white;" +
+        "border-color: black;" + 
+        "font: 30px;"
+    )
+    result1.setFont(QFont('Arial', 11))
     
     # Creating a label to for converting binary to decimal
     binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
@@ -321,7 +334,7 @@ class MainWindow():
     
     # prints Is global on the top horizontal frame
     global_label = QLabel(top_horiz_frame)
-    global_label.setGeometry(10, 10, 140, 100) 
+    global_label.setGeometry(10, 10, 140, 50) 
     global_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
@@ -329,7 +342,7 @@ class MainWindow():
     )
     
     link_local_label = QLabel(top_horiz_frame)
-    link_local_label.setGeometry(10, 20, 140, 100) 
+    link_local_label.setGeometry(10, 110, 140, 50) 
     link_local_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
