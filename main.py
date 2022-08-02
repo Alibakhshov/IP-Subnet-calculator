@@ -48,7 +48,7 @@ class MainWindow():
     global loopback_label
     global max_prefixlen_label
     global packed_label
-    
+    global info_about_ip_input
     
     def myIPAddress():
         
@@ -119,9 +119,9 @@ class MainWindow():
     def globalFind():
         
         
+       
         
-        
-        ip = ipaddress.IPv4Address(global_input.text())
+        ip = ipaddress.IPv4Address(info_about_ip_input.text())
         result.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
         result2.setText(str(ip.is_reserved))
@@ -141,8 +141,18 @@ class MainWindow():
     def Clear():
         decToBin_input.setText('')
         binToDec_input.setText('')
-        global_input.setText('')
+        info_about_ip_input.setText('')
         result.setText('')
+        result1.setText('')
+        result2.setText('')
+        result3.setText('')
+        result4.setText('')
+        result5.setText('')
+        result6.setText('')
+        global_label.setText('')
+        packed_label.setText('')
+    
+    
     
     # creating function to close the window
     def close_window():
@@ -478,12 +488,12 @@ class MainWindow():
     
     
     # creating an input space to check whether the IP address global or not
-    global_input = QLineEdit(bottom_horiz_frame)
-    global_input.setStyleSheet(
+    info_about_ip_input = QLineEdit(bottom_horiz_frame)
+    info_about_ip_input.setStyleSheet(
         "font: 25px;" + 
         "border-radius: 0px;"
     )
-    global_input.setGeometry(400, 170, 300, 60)
+    info_about_ip_input.setGeometry(400, 170, 300, 60)
     
     
     # Creating a title for the calculator
