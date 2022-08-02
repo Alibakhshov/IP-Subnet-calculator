@@ -38,6 +38,8 @@ class MainWindow():
     global global_label
     global link_local_label
     global result1
+    global result2
+    global reserved_label
     
     def myIPAddress():
         
@@ -117,8 +119,10 @@ class MainWindow():
         ip = ipaddress.IPv4Address(global_input.text())
         result.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
+        result2.setText(str(ip.is_reserved))
         global_label.setText("Is global: ")
         link_local_label.setText("Is link local: ")
+        reserved_label.setText("Is reserved: ")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
@@ -312,15 +316,26 @@ class MainWindow():
     )
     result1.setFont(QFont('Arial', 11))
     
+    
     # Creating a label to show whether the given IP address is reserved or not
-    result1 = QLabel(top_horiz_frame)
-    result1.setGeometry(185, 65, 300, 50)
-    result1.setStyleSheet(
+    result2 = QLabel(top_horiz_frame)
+    result2.setGeometry(185, 110, 300, 50)
+    result2.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
         "font: 30px;"
     )
-    result1.setFont(QFont('Arial', 11))
+    result2.setFont(QFont('Arial', 11))
+    
+    # Creating a label to show whether the given IP address is multicast or not
+    result3 = QLabel(top_horiz_frame)
+    result3.setGeometry(185, 110, 300, 50)
+    result3.setStyleSheet(
+        "background-color: white;" +
+        "border-color: black;" + 
+        "font: 30px;"
+    )
+    result3.setFont(QFont('Arial', 11))
     
     # Creating a label to for converting binary to decimal
     binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
@@ -363,6 +378,15 @@ class MainWindow():
     reserved_label = QLabel(top_horiz_frame)
     reserved_label.setGeometry(10, 110, 175, 50) 
     reserved_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
+    
+    # prints Is multicast on the top horizontal frame
+    multicast_label = QLabel(top_horiz_frame)
+    multicast_label.setGeometry(10, 165, 175, 50) 
+    multicast_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
             "font: 30px;"
