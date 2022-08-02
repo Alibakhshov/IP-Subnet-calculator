@@ -92,6 +92,7 @@ class MainWindow():
                 "color: red;"
             )
         else:
+            
             binary_number = int(binToDec_input.text())
             decimal_value=0
             a = 1
@@ -109,6 +110,14 @@ class MainWindow():
                 "border-color: white;" + 
                 "font: 55px;" 
             )
+            result.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+            
+            
     def DecToBin():
         
         if int(decToBin_input.text()) == '':
@@ -118,14 +127,14 @@ class MainWindow():
             dec_result = (bin(dec_number)[2:])
             result.setText(str(dec_result))
             
-    def globalFind():
+    def ipInfo():
         
         
         # if info_about_ip_input.text() == '':
             
         
         ip = ipaddress.IPv4Address(info_about_ip_input.text())
-        result0.setText(str(ip.is_global))
+        result.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
         result2.setText(str(ip.is_reserved))
         result3.setText(str(ip.is_multicast))
@@ -303,7 +312,7 @@ class MainWindow():
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
     global_button.setGeometry(50, 600, 200, 40)
-    global_button.clicked.connect(globalFind)
+    global_button.clicked.connect(ipInfo)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
@@ -320,7 +329,6 @@ class MainWindow():
      
     #----------------------------------------------LABELS-------------------------------------- 
      
-    
      
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
