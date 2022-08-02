@@ -139,7 +139,7 @@ class MainWindow():
         multicast_label.setText("Is multicast: ")
         loopback_label.setText("Is loopback")
         max_prefixlen_label.setText("Max prefixlength:")
-        packed_label.setText("Max prefixlength:")
+        packed_label.setText("Is packed: ")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
