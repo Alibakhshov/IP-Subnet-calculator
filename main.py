@@ -328,6 +328,14 @@ class MainWindow():
             "font: 30px;"
     )
     
+    link_local_label = QLabel(top_horiz_frame)
+    link_local_label.setGeometry(10, 20, 140, 100) 
+    link_local_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
+    
     #-----------------------------------------------INPUTS-------------------------------------------
     
     # creating an input space for converting binary to decimal
