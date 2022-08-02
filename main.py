@@ -45,7 +45,7 @@ class MainWindow():
     global reserved_label
     global multicast_label
     global loopback_label
-    
+    global max_prefixlen_label
     
     
     
@@ -130,11 +130,13 @@ class MainWindow():
         result2.setText(str(ip.is_reserved))
         result3.setText(str(ip.is_multicast))
         result4.setText(str(ip.is_loopback))
+        result5.setText(str(ip.max_prefixlen))
         global_label.setText("Is global: ")
         link_local_label.setText("Is link local: ")
         reserved_label.setText("Is reserved: ")
         multicast_label.setText("Is multicast: ")
         loopback_label.setText("Is loopback")
+        max_prefixlen_label.setText("Max prefixlength")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
@@ -422,6 +424,16 @@ class MainWindow():
             "border-color: black;" + 
             "font: 30px;"
     )
+    
+     # prints mac prefixlength on the top horizontal frame
+    loopback_label = QLabel(top_horiz_frame)
+    loopback_label.setGeometry(10, 210, 175, 50) 
+    loopback_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
+    max_prefixlen_label
     
     #-----------------------------------------------INPUTS-------------------------------------------
     
