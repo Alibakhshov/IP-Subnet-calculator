@@ -136,7 +136,7 @@ class MainWindow():
         reserved_label.setText("Is reserved: ")
         multicast_label.setText("Is multicast: ")
         loopback_label.setText("Is loopback")
-        max_prefixlen_label.setText("Max prefixlength")
+        max_prefixlen_label.setText("Max prefixlength:")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
@@ -361,6 +361,16 @@ class MainWindow():
     )
     result4.setFont(QFont('Arial', 11))
     
+    # Creating a label to show the max prefixlength
+    result5 = QLabel(top_horiz_frame)
+    result5.setGeometry(250, 265, 300, 50)
+    result5.setStyleSheet(
+        "background-color: white;" +
+        "border-color: black;" + 
+        "font: 30px;"
+    )
+    result5.setFont(QFont('Arial', 11))
+    
     # Creating a label to for converting binary to decimal
     binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
     binToDec_label.setGeometry(5, 5, 500, 100)
@@ -426,14 +436,14 @@ class MainWindow():
     )
     
      # prints mac prefixlength on the top horizontal frame
-    loopback_label = QLabel(top_horiz_frame)
-    loopback_label.setGeometry(10, 210, 175, 50) 
-    loopback_label.setStyleSheet(
+    max_prefixlen_label = QLabel(top_horiz_frame)
+    max_prefixlen_label.setGeometry(10, 265, 240, 50) 
+    max_prefixlen_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
             "font: 30px;"
     )
-    max_prefixlen_label
+    
     
     #-----------------------------------------------INPUTS-------------------------------------------
     
