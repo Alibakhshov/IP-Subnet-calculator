@@ -349,6 +349,16 @@ class MainWindow():
     )
     result3.setFont(QFont('Arial', 11))
     
+    # Creating a label to show whether the given IP address is loopback or not
+    result4 = QLabel(top_horiz_frame)
+    result4.setGeometry(185, 210, 300, 50)
+    result4.setStyleSheet(
+        "background-color: white;" +
+        "border-color: black;" + 
+        "font: 30px;"
+    )
+    result4.setFont(QFont('Arial', 11))
+    
     # Creating a label to for converting binary to decimal
     binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
     binToDec_label.setGeometry(5, 5, 500, 100)
@@ -398,6 +408,15 @@ class MainWindow():
     # prints Is multicast on the top horizontal frame
     multicast_label = QLabel(top_horiz_frame)
     multicast_label.setGeometry(10, 165, 175, 50) 
+    multicast_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
+    
+    # prints Is loopback on the top horizontal frame
+    multicast_label = QLabel(top_horiz_frame)
+    multicast_label.setGeometry(10, 210, 175, 50) 
     multicast_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
