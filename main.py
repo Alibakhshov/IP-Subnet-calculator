@@ -376,7 +376,7 @@ class MainWindow():
     
     # Creating a label to show whether the IP address is packed or not
     result6 = QLabel(top_horiz_frame)
-    result6.setGeometry(250, 265, 300, 50)
+    result6.setGeometry(185, 310, 300, 50)
     result6.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
@@ -459,7 +459,7 @@ class MainWindow():
     
      # prints is packed on the top horizontal frame
     packed_label = QLabel(top_horiz_frame)
-    packed_label.setGeometry(10, 265, 240, 50) 
+    packed_label.setGeometry(10, 310, 175, 50) 
     packed_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
