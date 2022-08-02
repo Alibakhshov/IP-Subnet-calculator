@@ -62,12 +62,26 @@ class MainWindow():
         print(IP_address)
         print(host_name)
         error_msg_label.setText(IP_address)
+        error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;"    
+        )
         
     def myHostName():
         
         host_name = socket.gethostname()
         print(host_name)
-        result.setText(host_name)
+        error_msg_label.setText(host_name)
+        
+        error_msg_label.setText(host_name)
+        error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;"    
+        )
+        
+        
         
     def BinToDec():         
         binary_number = int(binToDec_input.text())
