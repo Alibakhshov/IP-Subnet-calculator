@@ -86,6 +86,11 @@ class MainWindow():
     def BinToDec():         
         
         binary_number = int(binToDec_input.text())
+        count_bin_num = 0
+        while(binary_number > 0):
+            count_bin_num = count_bin_num + 1
+            binary_number = binary_number // 10
+        print("The number of digits in the number are:", count_bin_num)
         
         if binToDec_input.text() == '':
             error_msg_label.setText("Please fill in all \n required entry fields")
@@ -96,12 +101,7 @@ class MainWindow():
                 "color: red;"
             )
         elif count_bin_num > 8:
-            binary_number = int(binToDec_input.text())
-            count_bin_num = 0
-            while(binary_number > 0):
-                count_bin_num = count_bin_num + 1
-                binary_number = binary_number // 10
-            print("The number of digits in the number are:", count_bin_num)
+            
                         
             error_msg_label.setText("Binary numbers should \nnot be greater than 8 digits")
             error_msg_label.setStyleSheet(
