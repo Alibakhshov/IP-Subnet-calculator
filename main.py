@@ -84,24 +84,25 @@ class MainWindow():
         
         
     def BinToDec():         
-        binary_number = int(binToDec_input.text())
-        count_bin_num = 0
-        while(binary_number > 0):
-            count_bin_num = count_bin_num + 1
-            binary_number = binary_number // 10
-        print("The number of digits in the number are:", count_bin_num)
-                    
-        if int(binToDec_input.text()) == "" or int(binToDec_input.text()) == '':
-            result.setText("Please fill in all \n required entry fields")
-            result.setStyleSheet(
+        
+        if binToDec_input.text() == '':
+            error_msg_label.setText("Please fill in all \n required entry fields")
+            error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" +
                 "color: red;"
             )
         elif count_bin_num > 8:
-            result.setText("Binary numbers should \nnot be greater than 8 digits")
-            result.setStyleSheet(
+            binary_number = int(binToDec_input.text())
+            count_bin_num = 0
+            while(binary_number > 0):
+                count_bin_num = count_bin_num + 1
+                binary_number = binary_number // 10
+            print("The number of digits in the number are:", count_bin_num)
+                        
+            error_msg_label.setText("Binary numbers should \nnot be greater than 8 digits")
+            error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" +
@@ -126,18 +127,19 @@ class MainWindow():
                 "border-color: white;" + 
                 "font: 55px;" 
             )
-            result.setStyleSheet(
+            
+            
+    def DecToBin():
+        
+        if decToBin_input.text() == '':
+            error_msg_label.setText("Please fill in all \n required entry fields")
+            error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" +
                 "color: red;"
             )
             
-            
-    def DecToBin():
-        
-        if int(decToBin_input.text()) == '':
-            result.setText("Please fill in all \n required entry fields")
         else:
             dec_number = int(decToBin_input.text())
             dec_result = (bin(dec_number)[2:])
@@ -148,6 +150,12 @@ class MainWindow():
         
         if info_about_ip_input.text() == '':
             error_msg_label.setText("Please fill in all \n required entry fields")
+            error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
             
         else:
         
@@ -186,7 +194,7 @@ class MainWindow():
         multicast_label.setText('')
         loopback_label.setText('')
         max_prefixlen_label.setText('')
-    
+        error_msg_label.setText('')
     
     
     # creating function to close the window
@@ -506,12 +514,7 @@ class MainWindow():
     error_msg_label = QLabel(right_vert_frame)
     error_msg_label.setGeometry(10, 10, 630, 290) 
     error_msg_label.setAlignment(Qt.AlignCenter)
-    error_msg_label.setStyleSheet(
-            "background-color: white;" +
-            "border-color: black;" + 
-            "font: 50px;" +
-            "color: red;"
-    )
+    
     
     #-----------------------------------------------INPUTS-------------------------------------------
     
