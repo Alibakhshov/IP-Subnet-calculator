@@ -92,7 +92,7 @@ class MainWindow():
             binary_number = binary_number // 10
         print("The number of digits in the number are:", count_bin_num)
         
-        if count_bin_num > 8 or binToDec_input.text() == '':
+        if count_bin_num > 8:
             
             error_msg_label.setText("You exceeded the limit. \nMax 8 digits allowed")
             error_msg_label.setStyleSheet(
@@ -102,15 +102,15 @@ class MainWindow():
                 "color: red;"
             )
         
-        # elif binToDec_input.text() == '':
+        elif binToDec_input.text() == '':
             
-        #     error_msg_label.setText("Please enter \n your binary number")
-        #     error_msg_label.setStyleSheet(
-        #         "background-color: white;" +
-        #         "border-color: white;" + 
-        #         "font: 55px;" +
-        #         "color: red;"
-        #     )
+            error_msg_label.setText("Please enter \n your binary number")
+            error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
                         
             
         else:
@@ -126,8 +126,8 @@ class MainWindow():
                 binary_number = int(binary_number/10)
             #display the decimal value
             print("Decimal number is  ", decimal_value)
-            result.setText(str(decimal_value))
-            result.setStyleSheet(
+            error_msg_label.setText(str(decimal_value))
+            error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" 
@@ -148,7 +148,12 @@ class MainWindow():
         else:
             dec_number = int(decToBin_input.text())
             dec_result = (bin(dec_number)[2:])
-            result.setText(str(dec_result))
+            error_msg_label.setText(str(dec_result))
+            error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" 
+            )
             
     def ipInfo():
         
