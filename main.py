@@ -124,6 +124,7 @@ class MainWindow():
         decToBin_input.setText('')
         binToDec_input.setText('')
         global_input.setText('')
+        result.setText('')
     
     # creating function to close the window
     def close_window():
