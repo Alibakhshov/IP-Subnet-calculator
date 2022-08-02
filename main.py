@@ -48,7 +48,7 @@ class MainWindow():
     global multicast_label
     global loopback_label
     global max_prefixlen_label
-    global packed_label
+    global reverse_label
     global info_about_ip_input
     
     def myIPAddress():
@@ -129,14 +129,14 @@ class MainWindow():
         result3.setText(str(ip.is_multicast))
         result4.setText(str(ip.is_loopback))
         result5.setText(str(ip.max_prefixlen))
-        result6.setText(str(ip.packed))
+        result6.setText(str(ip.reverse_pointer))
         global_label.setText("Is global: ")
         link_local_label.setText("Is link local: ")
         reserved_label.setText("Is reserved: ")
         multicast_label.setText("Is multicast: ")
-        loopback_label.setText("Is loopback")
+        loopback_label.setText("Is loopback: ")
         max_prefixlen_label.setText("Max prefixlength:")
-        packed_label.setText("Is packed: ")
+        reverse_label.setText("Reversed: ")
         
             
     def Clear():
@@ -151,7 +151,7 @@ class MainWindow():
         result5.setText('')
         result6.setText('')
         global_label.setText('')
-        packed_label.setText('')
+        reverse_label.setText('')
         link_local_label.setText('')
         reserved_label.setText('')
         multicast_label.setText('')
@@ -323,7 +323,7 @@ class MainWindow():
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     # result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(150, 10, 300, 50)
+    result.setGeometry(140, 10, 300, 50)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -333,7 +333,7 @@ class MainWindow():
     
     # Creating a label to show the result of link local
     result1 = QLabel(top_horiz_frame)
-    result1.setGeometry(185, 65, 300, 50)
+    result1.setGeometry(175, 65, 300, 50)
     result1.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -344,7 +344,7 @@ class MainWindow():
     
     # Creating a label to show whether the given IP address is reserved or not
     result2 = QLabel(top_horiz_frame)
-    result2.setGeometry(185, 110, 300, 50)
+    result2.setGeometry(175, 110, 300, 50)
     result2.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -354,7 +354,7 @@ class MainWindow():
     
     # Creating a label to show whether the given IP address is multicast or not
     result3 = QLabel(top_horiz_frame)
-    result3.setGeometry(185, 165, 300, 50)
+    result3.setGeometry(175, 165, 300, 50)
     result3.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -384,7 +384,7 @@ class MainWindow():
     
     # Creating a label to show whether the IP address is packed or not
     result6 = QLabel(top_horiz_frame)
-    result6.setGeometry(185, 310, 300, 50)
+    result6.setGeometry(145, 310, 300, 50)
     result6.setStyleSheet(
         "background-color: white;" +
         "border-color: white;" + 
@@ -449,7 +449,7 @@ class MainWindow():
     
     # prints Is loopback on the top horizontal frame
     loopback_label = QLabel(top_horiz_frame)
-    loopback_label.setGeometry(10, 210, 175, 50) 
+    loopback_label.setGeometry(10, 210, 185, 50) 
     loopback_label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
@@ -458,7 +458,7 @@ class MainWindow():
     
      # prints mac prefixlength on the top horizontal frame
     max_prefixlen_label = QLabel(top_horiz_frame)
-    max_prefixlen_label.setGeometry(10, 265, 240, 50) 
+    max_prefixlen_label.setGeometry(10, 265, 250, 50) 
     max_prefixlen_label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
@@ -466,9 +466,9 @@ class MainWindow():
     )
     
      # prints is packed on the top horizontal frame
-    packed_label = QLabel(top_horiz_frame)
-    packed_label.setGeometry(10, 310, 175, 50) 
-    packed_label.setStyleSheet(
+    reverse_label = QLabel(top_horiz_frame)
+    reverse_label.setGeometry(10, 310, 150, 50) 
+    reverse_label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
             "font: 30px;"
