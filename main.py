@@ -39,7 +39,15 @@ class MainWindow():
     global link_local_label
     global result1
     global result2
+    global result3
+    global result4
+    global result5
     global reserved_label
+    global multicast_label
+    global loopback_label
+    
+    
+    
     
     def myIPAddress():
         
@@ -120,9 +128,13 @@ class MainWindow():
         result.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
         result2.setText(str(ip.is_reserved))
+        result3.setText(str(ip.is_multicast))
+        result4.setText(str(ip.is_loopback))
         global_label.setText("Is global: ")
         link_local_label.setText("Is link local: ")
         reserved_label.setText("Is reserved: ")
+        multicast_label.setText("Is multicast: ")
+        loopback_label.setText("Is loopback")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
@@ -329,7 +341,7 @@ class MainWindow():
     
     # Creating a label to show whether the given IP address is multicast or not
     result3 = QLabel(top_horiz_frame)
-    result3.setGeometry(185, 110, 300, 50)
+    result3.setGeometry(185, 165, 300, 50)
     result3.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
