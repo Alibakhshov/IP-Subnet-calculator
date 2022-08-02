@@ -92,7 +92,7 @@ class MainWindow():
             binary_number = binary_number // 10
         print("The number of digits in the number are:", count_bin_num)
         
-        if count_bin_num > 8:
+        if count_bin_num > 8 or binToDec_input.text() == '':
             
             error_msg_label.setText("You exceeded the limit. \nMax 8 digits allowed")
             error_msg_label.setStyleSheet(
@@ -102,15 +102,15 @@ class MainWindow():
                 "color: red;"
             )
         
-        elif binToDec_input.text() == '':
+        # elif binToDec_input.text() == '':
             
-            error_msg_label.setText("Please fill in all \n required entry fields")
-            error_msg_label.setStyleSheet(
-                "background-color: white;" +
-                "border-color: white;" + 
-                "font: 55px;" +
-                "color: red;"
-            )
+        #     error_msg_label.setText("Please enter \n your binary number")
+        #     error_msg_label.setStyleSheet(
+        #         "background-color: white;" +
+        #         "border-color: white;" + 
+        #         "font: 55px;" +
+        #         "color: red;"
+        #     )
                         
             
         else:
