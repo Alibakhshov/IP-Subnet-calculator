@@ -120,11 +120,7 @@ class MainWindow():
         
         
         
-        # global_label.setStyleSheet(
-        #     "background-color: white;" +
-        #     "border-color: white;" + 
-        #     "font: 35px;"
-        # )
+        
         ip = ipaddress.IPv4Address(global_input.text())
         result.setText(str(ip.is_global))
         result1.setText(str(ip.is_link_local))
@@ -140,11 +136,7 @@ class MainWindow():
         loopback_label.setText("Is loopback")
         max_prefixlen_label.setText("Max prefixlength:")
         packed_label.setText("Is packed: ")
-        # result.setText("Is global: \n")
         
-        # result.setText(str(ip.is_link_local))
-        # print("Is global:", ip.is_global)
-        # print("Is link-local:", ip.is_link_local)
             
     def Clear():
         decToBin_input.setText('')
