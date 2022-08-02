@@ -493,9 +493,9 @@ class MainWindow():
     )
     
     # prints errors in the left frame
-    reverse_label = QLabel(top_horiz_frame)
-    reverse_label.setGeometry(10, 310, 150, 50) 
-    reverse_label.setStyleSheet(
+    _label = QLabel(top_horiz_frame)
+    _label.setGeometry(10, 310, 150, 50) 
+    _label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
             "font: 30px;"
