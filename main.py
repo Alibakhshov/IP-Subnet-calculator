@@ -42,11 +42,12 @@ class MainWindow():
     global result3
     global result4
     global result5
+    global result6
     global reserved_label
     global multicast_label
     global loopback_label
     global max_prefixlen_label
-    
+    global packed_label
     
     
     def myIPAddress():
@@ -131,12 +132,14 @@ class MainWindow():
         result3.setText(str(ip.is_multicast))
         result4.setText(str(ip.is_loopback))
         result5.setText(str(ip.max_prefixlen))
+        result6.setText(str(ip.packed))
         global_label.setText("Is global: ")
         link_local_label.setText("Is link local: ")
         reserved_label.setText("Is reserved: ")
         multicast_label.setText("Is multicast: ")
         loopback_label.setText("Is loopback")
         max_prefixlen_label.setText("Max prefixlength:")
+        packed_label.setText("Max prefixlength:")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
