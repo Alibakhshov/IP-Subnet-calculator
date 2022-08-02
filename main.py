@@ -113,14 +113,14 @@ class MainWindow():
         # )
         # ip = ipaddress.IPv4Address(global_input.text())
         # result.setText(str(ip.is_global))
-        global_label = QLabel("Is Global: ")
+        global_label = QLabel(top_horiz_frame)
         global_label.setGeometry(10, 10, 200, 100) 
         global_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
             "font: 30px;"
         )
-        top_horiz_frame.setText(global_label)
+        global_label.setText("Is global: ")
         # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
