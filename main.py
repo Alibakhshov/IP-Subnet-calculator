@@ -130,25 +130,33 @@ class MainWindow():
     def ipInfo():
         
         
-        # if info_about_ip_input.text() == '':
+        if info_about_ip_input.text() == '':
+            result.setText("Error")
+            result.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+            result.setGeometry(500, 20, 300, 50)
+        else:
+        
+            ip = ipaddress.IPv4Address(info_about_ip_input.text())
+            result.setText(str(ip.is_global))
+            result1.setText(str(ip.is_link_local))
+            result2.setText(str(ip.is_reserved))
+            result3.setText(str(ip.is_multicast))
+            result4.setText(str(ip.is_loopback))
+            result5.setText(str(ip.max_prefixlen))
+            result6.setText(str(ip.reverse_pointer))
+            global_label.setText("Is global: ")
+            link_local_label.setText("Is link local: ")
+            reserved_label.setText("Is reserved: ")
+            multicast_label.setText("Is multicast: ")
+            loopback_label.setText("Is loopback: ")
+            max_prefixlen_label.setText("Max prefixlength:")
+            reverse_label.setText("Reversed: ")
             
-        
-        ip = ipaddress.IPv4Address(info_about_ip_input.text())
-        result.setText(str(ip.is_global))
-        result1.setText(str(ip.is_link_local))
-        result2.setText(str(ip.is_reserved))
-        result3.setText(str(ip.is_multicast))
-        result4.setText(str(ip.is_loopback))
-        result5.setText(str(ip.max_prefixlen))
-        result6.setText(str(ip.reverse_pointer))
-        global_label.setText("Is global: ")
-        link_local_label.setText("Is link local: ")
-        reserved_label.setText("Is reserved: ")
-        multicast_label.setText("Is multicast: ")
-        loopback_label.setText("Is loopback: ")
-        max_prefixlen_label.setText("Max prefixlength:")
-        reverse_label.setText("Reversed: ")
-        
             
     def Clear():
         decToBin_input.setText('')
@@ -476,6 +484,15 @@ class MainWindow():
     )
     
      # prints is packed on the top horizontal frame
+    reverse_label = QLabel(top_horiz_frame)
+    reverse_label.setGeometry(10, 310, 150, 50) 
+    reverse_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: white;" + 
+            "font: 30px;"
+    )
+    
+    # prints errors in the left frame
     reverse_label = QLabel(top_horiz_frame)
     reverse_label.setGeometry(10, 310, 150, 50) 
     reverse_label.setStyleSheet(
