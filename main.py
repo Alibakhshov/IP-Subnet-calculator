@@ -104,17 +104,24 @@ class MainWindow():
             
     def globalFind():
         
-        # global_label = QLabel("Is Global: ", top_horiz_frame)
-        # global_label.setGeometry(5, 10, 500, 100)
+        
         
         # global_label.setStyleSheet(
         #     "background-color: white;" +
         #     "border-color: white;" + 
         #     "font: 35px;"
         # )
-        ip = ipaddress.IPv4Address(global_input.text())
-        result.setText(str(ip.is_global))
-        result.setText("Is global: \n")
+        # ip = ipaddress.IPv4Address(global_input.text())
+        # result.setText(str(ip.is_global))
+        global_label = QLabel("Is Global: ")
+        global_label.setGeometry(10, 10, 200, 100) 
+        global_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+        )
+        top_horiz_frame.setText(global_label)
+        # result.setText("Is global: \n")
         
         # result.setText(str(ip.is_link_local))
         # print("Is global:", ip.is_global)
@@ -284,14 +291,16 @@ class MainWindow():
      
     #----------------------------------------------LABELS-------------------------------------- 
      
+    
+     
     # Creating a label to show the result
     result = QLabel(top_horiz_frame)
     # result.setAlignment(Qt.AlignCenter)
-    result.setGeometry(10, 10, 600, 100)
+    result.setGeometry(150, 10, 300, 100)
     result.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
-        "font: 15px;"
+        "font: 30px;"
     )
     result.setFont(QFont('Arial', 11))
     
