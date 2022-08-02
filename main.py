@@ -447,6 +447,14 @@ class MainWindow():
             "font: 30px;"
     )
     
+     # prints is packed on the top horizontal frame
+    packed_label = QLabel(top_horiz_frame)
+    packed_label.setGeometry(10, 265, 240, 50) 
+    packed_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
     
     #-----------------------------------------------INPUTS-------------------------------------------
     
