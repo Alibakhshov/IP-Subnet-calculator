@@ -305,7 +305,7 @@ class MainWindow():
     # Creating a label to show the result of link local
     result1 = QLabel(top_horiz_frame)
     # result.setAlignment(Qt.AlignCenter)
-    result1.setGeometry(250, 110, 300, 50)
+    result1.setGeometry(185, 65, 300, 50)
     result1.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
@@ -341,9 +341,19 @@ class MainWindow():
             "font: 30px;"
     )
     
+    # prints Is link local on the top horizontal frame
     link_local_label = QLabel(top_horiz_frame)
-    link_local_label.setGeometry(10, 110, 140, 50) 
+    link_local_label.setGeometry(10, 65, 175, 50) 
     link_local_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
+    )
+    
+    # prints Is reserved on the top horizontal frame
+    reserved_label = QLabel(top_horiz_frame)
+    reserved_label.setGeometry(10, 65, 175, 50) 
+    reserved_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
             "font: 30px;"
