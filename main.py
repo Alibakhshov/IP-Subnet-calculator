@@ -493,12 +493,13 @@ class MainWindow():
     )
     
     # prints errors in the left frame
-    _label = QLabel(top_horiz_frame)
-    _label.setGeometry(10, 310, 150, 50) 
-    _label.setStyleSheet(
+    error_msg_label = QLabel(right_vert_frame)
+    error_msg_label.setGeometry(10, 10, 630, 290) 
+    error_msg_label.setStyleSheet(
             "background-color: white;" +
             "border-color: white;" + 
-            "font: 30px;"
+            "font: 30px;" +
+            "color: red;"
     )
     
     #-----------------------------------------------INPUTS-------------------------------------------
