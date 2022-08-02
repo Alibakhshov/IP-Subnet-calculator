@@ -1,5 +1,6 @@
 # importing from packages fromPyQt5
 
+from audioop import mul
 from PyQt5.QtWidgets import (
 QApplication, 
 QWidget,
@@ -151,6 +152,11 @@ class MainWindow():
         result6.setText('')
         global_label.setText('')
         packed_label.setText('')
+        link_local_label.setText('')
+        reserved_label.setText('')
+        multicast_label.setText('')
+        loopback_label.setText('')
+        max_prefixlen_label.setText('')
     
     
     
