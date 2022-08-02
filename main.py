@@ -134,7 +134,7 @@ class MainWindow():
     def DecToBin():
         
         if decToBin_input.text() == '':
-            error_msg_label.setText("Please fill in all \n required entry fields")
+            error_msg_label.setText("Please enter your \n decimal value")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
@@ -151,7 +151,7 @@ class MainWindow():
         
         
         if info_about_ip_input.text() == '':
-            error_msg_label.setText("Please fill in all \n required entry fields")
+            error_msg_label.setText("Please enter \n an IP address ")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
