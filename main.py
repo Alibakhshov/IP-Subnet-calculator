@@ -35,6 +35,8 @@ class MainWindow():
     global decToBin_input 
     global global_input
     global top_horiz_frame
+    global global_label
+    
     
     def myIPAddress():
         
@@ -111,15 +113,9 @@ class MainWindow():
         #     "border-color: white;" + 
         #     "font: 35px;"
         # )
-        # ip = ipaddress.IPv4Address(global_input.text())
-        # result.setText(str(ip.is_global))
-        global_label = QLabel(top_horiz_frame)
-        global_label.setGeometry(10, 10, 200, 100) 
-        global_label.setStyleSheet(
-            "background-color: white;" +
-            "border-color: black;" + 
-            "font: 30px;"
-        )
+        ip = ipaddress.IPv4Address(global_input.text())
+        result.setText(str(ip.is_global))
+        
         global_label.setText("Is global: ")
         # result.setText("Is global: \n")
         
@@ -321,6 +317,15 @@ class MainWindow():
         "background-color: white;" +
         "border-color: white;" + 
         "font: 35px;"
+    )
+    
+    # prints Is global on the top horizontal frame
+    global_label = QLabel(top_horiz_frame)
+    global_label.setGeometry(10, 10, 140, 100) 
+    global_label.setStyleSheet(
+            "background-color: white;" +
+            "border-color: black;" + 
+            "font: 30px;"
     )
     
     #-----------------------------------------------INPUTS-------------------------------------------
