@@ -375,14 +375,14 @@ class MainWindow():
     result5.setFont(QFont('Arial', 11))
     
     # Creating a label to show whether the IP address is packed or not
-    result5 = QLabel(top_horiz_frame)
-    result5.setGeometry(250, 265, 300, 50)
-    result5.setStyleSheet(
+    result6 = QLabel(top_horiz_frame)
+    result6.setGeometry(250, 265, 300, 50)
+    result6.setStyleSheet(
         "background-color: white;" +
         "border-color: black;" + 
         "font: 30px;"
     )
-    result5.setFont(QFont('Arial', 11))
+    result6.setFont(QFont('Arial', 11))
     
     # Creating a label to for converting binary to decimal
     binToDec_label = QLabel("Enter binary number", bottom_horiz_frame)
