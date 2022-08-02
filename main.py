@@ -51,6 +51,8 @@ class MainWindow():
     global max_prefixlen_label
     global reverse_label
     global info_about_ip_input
+    global error_msg_label
+    
     
     def myIPAddress():
         
@@ -59,7 +61,7 @@ class MainWindow():
 
         print(IP_address)
         print(host_name)
-        result.setText(IP_address)
+        error_msg_label.setText(IP_address)
         
     def myHostName():
         
@@ -131,14 +133,8 @@ class MainWindow():
         
         
         if info_about_ip_input.text() == '':
-            result.setText("Error")
-            result.setStyleSheet(
-                "background-color: white;" +
-                "border-color: white;" + 
-                "font: 55px;" +
-                "color: red;"
-            )
-            result.setGeometry(500, 20, 300, 50)
+            error_msg_label.setText("Please fill in all \n required entry fields")
+            
         else:
         
             ip = ipaddress.IPv4Address(info_about_ip_input.text())
@@ -495,10 +491,11 @@ class MainWindow():
     # prints errors in the left frame
     error_msg_label = QLabel(right_vert_frame)
     error_msg_label.setGeometry(10, 10, 630, 290) 
+    error_msg_label.setAlignment(Qt.AlignCenter)
     error_msg_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: white;" + 
-            "font: 30px;" +
+            "border-color: black;" + 
+            "font: 50px;" +
             "color: red;"
     )
     
