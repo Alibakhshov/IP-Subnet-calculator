@@ -326,7 +326,7 @@ class MainWindow():
     result.setGeometry(150, 10, 300, 50)
     result.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result.setFont(QFont('Arial', 11))
@@ -336,7 +336,7 @@ class MainWindow():
     result1.setGeometry(185, 65, 300, 50)
     result1.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result1.setFont(QFont('Arial', 11))
@@ -347,7 +347,7 @@ class MainWindow():
     result2.setGeometry(185, 110, 300, 50)
     result2.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result2.setFont(QFont('Arial', 11))
@@ -357,7 +357,7 @@ class MainWindow():
     result3.setGeometry(185, 165, 300, 50)
     result3.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result3.setFont(QFont('Arial', 11))
@@ -367,7 +367,7 @@ class MainWindow():
     result4.setGeometry(185, 210, 300, 50)
     result4.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result4.setFont(QFont('Arial', 11))
@@ -377,7 +377,7 @@ class MainWindow():
     result5.setGeometry(250, 265, 300, 50)
     result5.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result5.setFont(QFont('Arial', 11))
@@ -387,7 +387,7 @@ class MainWindow():
     result6.setGeometry(185, 310, 300, 50)
     result6.setStyleSheet(
         "background-color: white;" +
-        "border-color: black;" + 
+        "border-color: white;" + 
         "font: 30px;"
     )
     result6.setFont(QFont('Arial', 11))
@@ -416,7 +416,7 @@ class MainWindow():
     global_label.setGeometry(10, 10, 140, 50) 
     global_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -425,7 +425,7 @@ class MainWindow():
     link_local_label.setGeometry(10, 65, 175, 50) 
     link_local_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -434,7 +434,7 @@ class MainWindow():
     reserved_label.setGeometry(10, 110, 175, 50) 
     reserved_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -443,7 +443,7 @@ class MainWindow():
     multicast_label.setGeometry(10, 165, 175, 50) 
     multicast_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -452,7 +452,7 @@ class MainWindow():
     loopback_label.setGeometry(10, 210, 175, 50) 
     loopback_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -461,7 +461,7 @@ class MainWindow():
     max_prefixlen_label.setGeometry(10, 265, 240, 50) 
     max_prefixlen_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
@@ -470,7 +470,7 @@ class MainWindow():
     packed_label.setGeometry(10, 310, 175, 50) 
     packed_label.setStyleSheet(
             "background-color: white;" +
-            "border-color: black;" + 
+            "border-color: white;" + 
             "font: 30px;"
     )
     
