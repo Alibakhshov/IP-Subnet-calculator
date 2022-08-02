@@ -85,6 +85,8 @@ class MainWindow():
         
     def BinToDec():         
         
+        binary_number = int(binToDec_input.text())
+        
         if binToDec_input.text() == '':
             error_msg_label.setText("Please fill in all \n required entry fields")
             error_msg_label.setStyleSheet(
