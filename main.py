@@ -415,9 +415,9 @@ class MainWindow():
     )
     
     # prints Is loopback on the top horizontal frame
-    multicast_label = QLabel(top_horiz_frame)
-    multicast_label.setGeometry(10, 210, 175, 50) 
-    multicast_label.setStyleSheet(
+    loopback_label = QLabel(top_horiz_frame)
+    loopback_label.setGeometry(10, 210, 175, 50) 
+    loopback_label.setStyleSheet(
             "background-color: white;" +
             "border-color: black;" + 
             "font: 30px;"
