@@ -189,16 +189,17 @@ class MainWindow():
             
     def Netmask():
         
+        # initialize an IPv4 Network
+        network = ipaddress.IPv4Network(info_about_ip_input.text())
         result.setText(str(network.netmask))
-        result.setGeometry(140, 10, 300, 50)
+        result.setGeometry(200, 10, 300, 50)
         result1.setText(str(network.broadcast_address))
         result2.setText(str(network.num_addresses))
         global_label.setText("Network mask: ")
         link_local_label.setText("Broadcast address: ")
         reserved_label.setText("Number of hosts under: ")
         
-        # initialize an IPv4 Network
-        network = ipaddress.IPv4Network(info_about_ip_input.text())
+        
 
         # get the network mask
         print("Network mask:", network.netmask)
