@@ -366,7 +366,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-    netmask_button.setGeometry(50, 400, 200, 40)
+    netmask_button.setGeometry(50, 650, 200, 40)
     netmask_button.clicked.connect(Netmask)
      
     
