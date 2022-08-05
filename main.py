@@ -194,7 +194,7 @@ class MainWindow():
         result.setText(str(network.netmask))
         result.setGeometry(220, 10, 300, 50)
         result1.setText(str(network.broadcast_address))
-        result1.setGeometry(250, 65, 300, 50)
+        result1.setGeometry(270, 65, 300, 50)
         result2.setText(str(network.num_addresses))
         result2.setGeometry(175, 110, 300, 50)
         global_label.setText("Network mask: ")
