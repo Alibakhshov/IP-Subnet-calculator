@@ -196,13 +196,13 @@ class MainWindow():
         result1.setText(str(network.broadcast_address))
         result1.setGeometry(270, 65, 300, 50)
         result2.setText(str(network.num_addresses))
-        result2.setGeometry(175, 110, 300, 50)
+        result2.setGeometry(270, 110, 300, 50)
         global_label.setText("Network mask: ")
         global_label.setGeometry(10, 10, 220, 50) 
         link_local_label.setText("Broadcast address: ")
-        link_local_label.setGeometry(10, 65, 260, 50) 
+        link_local_label.setGeometry(10, 65, 270, 50) 
         reserved_label.setText("Number of hosts: ")
-        reserved_label.setGeometry(10, 110, 175, 50) 
+        reserved_label.setGeometry(10, 120, 270, 50) 
         
         
 
