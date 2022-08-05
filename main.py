@@ -189,6 +189,14 @@ class MainWindow():
             
     def Netmask():
         
+        result.setText(str(network.netmask))
+        result.setGeometry(140, 10, 300, 50)
+        result1.setText(str(network.broadcast_address))
+        result2.setText(str(network.num_addresses))
+        global_label.setText("Network mask: ")
+        link_local_label.setText("Broadcast address: ")
+        reserved_label.setText("Number of hosts under: ")
+        
         # initialize an IPv4 Network
         network = ipaddress.IPv4Network(info_about_ip_input.text())
 
@@ -201,12 +209,7 @@ class MainWindow():
         # print the number of IP addresses under this network
         print("Number of hosts under", str(network), ":", network.num_addresses)
         
-        result.setText(str(ip.is_global))
-        result1.setText(str(ip.is_link_local))
-        result2.setText(str(ip.is_reserved))
-        global_label.setText("Network mask: ")
-        link_local_label.setText("Broadcast address: ")
-        reserved_label.setText("Number of hosts under: ")
+        
     
     def Clear():
         decToBin_input.setText('')
