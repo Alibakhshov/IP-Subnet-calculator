@@ -188,9 +188,25 @@ class MainWindow():
             
             
     def Netmask():
-        global_label.setText("Is global: ")
-        link_local_label.setText("Is link local: ")
-        reserved_label.setText("Is reserved: ")
+        
+        # initialize an IPv4 Network
+        network = ipaddress.IPv4Network(info_about_ip_input.text())
+
+        # get the network mask
+        print("Network mask:", network.netmask)
+
+        # get the broadcast address
+        print("Broadcast address:", network.broadcast_address)
+
+        # print the number of IP addresses under this network
+        print("Number of hosts under", str(network), ":", network.num_addresses)
+        
+        result.setText(str(ip.is_global))
+        result1.setText(str(ip.is_link_local))
+        result2.setText(str(ip.is_reserved))
+        global_label.setText("Network mask: ")
+        link_local_label.setText("Broadcast address: ")
+        reserved_label.setText("Number of hosts under: ")
     
     def Clear():
         decToBin_input.setText('')
