@@ -356,6 +356,20 @@ class MainWindow():
     IP_info_button.setGeometry(50, 600, 200, 40)
     IP_info_button.clicked.connect(ipInfo)
     
+    # creating a button to find the netmask
+    netmask_button = QPushButton("Exit", right_vert_frame)
+    netmask_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    netmask_button.setStyleSheet(
+        "*{border: 5px solid '#2F4F4F';" +
+        "border-radius: 25px;" +
+        "color: 'black';" +
+        "font-size: 20px;}" +
+        "*:hover{background: '#2F4F4F';}"                                 
+    ) # setting border style
+    netmask_button.setGeometry(50, 400, 200, 40)
+    netmask_button.clicked.connect(Netmask)
+     
+    
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
     exit_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
@@ -368,6 +382,8 @@ class MainWindow():
     ) # setting border style
     exit_button.setGeometry(50, 400, 200, 40)
     exit_button.clicked.connect(close_window)
+     
+    
      
     #----------------------------------------------LABELS-------------------------------------- 
      
