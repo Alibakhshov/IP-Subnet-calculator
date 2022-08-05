@@ -186,6 +186,12 @@ class MainWindow():
             reverse_label.setText("Reversed: ")
             
             
+            
+    def Netmask():
+        global_label.setText("Is global: ")
+        link_local_label.setText("Is link local: ")
+        reserved_label.setText("Is reserved: ")
+    
     def Clear():
         decToBin_input.setText('')
         binToDec_input.setText('')
@@ -338,17 +344,17 @@ class MainWindow():
     clear_button.clicked.connect(Clear)
     
     # creating a button to find whether the IP is global or not. If it is global it prints True
-    global_button = QPushButton("Global", right_vert_frame)
-    global_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
-    global_button.setStyleSheet(
+    IP_info_button = QPushButton("Get info", right_vert_frame)
+    IP_info_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
+    IP_info_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
         "border-radius: 25px;" +
         "color: 'black';" +
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    global_button.setGeometry(50, 600, 200, 40)
-    global_button.clicked.connect(ipInfo)
+    IP_info_button.setGeometry(50, 600, 200, 40)
+    IP_info_button.clicked.connect(ipInfo)
     
     # creating a button to exit the program
     exit_button = QPushButton("Exit", right_vert_frame)
