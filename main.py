@@ -192,13 +192,17 @@ class MainWindow():
         # initialize an IPv4 Network
         network = ipaddress.IPv4Network(info_about_ip_input.text())
         result.setText(str(network.netmask))
-        result.setGeometry(200, 10, 300, 50)
+        result.setGeometry(220, 10, 300, 50)
         result1.setText(str(network.broadcast_address))
+        result1.setGeometry(220, 65, 300, 50)
         result2.setText(str(network.num_addresses))
+        result2.setGeometry(175, 110, 300, 50)
         global_label.setText("Network mask: ")
-        global_label.setGeometry(10, 10, 250, 50) 
+        global_label.setGeometry(10, 10, 220, 50) 
         link_local_label.setText("Broadcast address: ")
-        reserved_label.setText("Number of hosts under: ")
+        link_local_label.setGeometry(10, 65, 175, 50) 
+        reserved_label.setText("Number of hosts: ")
+        reserved_label.setGeometry(10, 110, 175, 50) 
         
         
 
