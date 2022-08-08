@@ -189,22 +189,26 @@ class MainWindow():
             
     def Netmask():
         
-        # initialize an IPv4 Network
-        network = ipaddress.IPv4Network(info_about_ip_input.text())
-        result.setText(str(network.netmask))
-        result.setGeometry(220, 10, 300, 50)
-        result1.setText(str(network.broadcast_address))
-        result1.setGeometry(270, 65, 300, 50)
-        result2.setText(str(network.num_addresses))
-        result2.setGeometry(260, 120, 300, 50)
-        global_label.setText("Network mask: ")
-        global_label.setGeometry(10, 10, 220, 50) 
-        link_local_label.setText("Broadcast address: ")
-        link_local_label.setGeometry(10, 65, 270, 50) 
-        reserved_label.setText("Number of hosts: ")
-        reserved_label.setGeometry(10, 120, 260, 50) 
+        if info_about_ip_input.text() == '':
+            error_msg_label.setText("Please enter \n an IP address ")
+        else:
         
-        
+            # initialize an IPv4 Network
+            network = ipaddress.IPv4Network(info_about_ip_input.text())
+            result.setText(str(network.netmask))
+            result.setGeometry(220, 10, 300, 50)
+            result1.setText(str(network.broadcast_address))
+            result1.setGeometry(270, 65, 300, 50)
+            result2.setText(str(network.num_addresses))
+            result2.setGeometry(260, 120, 300, 50)
+            global_label.setText("Network mask: ")
+            global_label.setGeometry(10, 10, 220, 50) 
+            link_local_label.setText("Broadcast address: ")
+            link_local_label.setGeometry(10, 65, 270, 50) 
+            reserved_label.setText("Number of hosts: ")
+            reserved_label.setGeometry(10, 120, 260, 50) 
+            
+            
 
         # get the network mask
         print("Network mask:", network.netmask)
@@ -382,7 +386,7 @@ class MainWindow():
     IP_info_button.clicked.connect(ipInfo)
     
     # creating a button to find the netmask
-    netmask_button = QPushButton("Exit", right_vert_frame)
+    netmask_button = QPushButton("Netmask", right_vert_frame)
     netmask_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     netmask_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
