@@ -188,13 +188,20 @@ class MainWindow():
             
             
     def Netmask():
+        network = ipaddress.IPv4Network(info_about_ip_input.text())
         
         if info_about_ip_input.text() == '':
             error_msg_label.setText("Please enter \n an IP address ")
+            error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+            
         else:
-        
             # initialize an IPv4 Network
-            network = ipaddress.IPv4Network(info_about_ip_input.text())
+            
             result.setText(str(network.netmask))
             result.setGeometry(220, 10, 300, 50)
             result1.setText(str(network.broadcast_address))
