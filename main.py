@@ -349,7 +349,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    binToDec_button.setGeometry(50, 400, 200, 40)
+    binToDec_button.setGeometry(50, 450, 220, 60)
     binToDec_button.clicked.connect(BinToDec)
     
     # creating a button to convert decimal to binary
@@ -362,7 +362,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    DecToBin_button.setGeometry(50, 500, 200, 40)
+    DecToBin_button.setGeometry(50, 550, 220, 60)
     DecToBin_button.clicked.connect(DecToBin)
     
     # creating a button to clear all the inputs
@@ -375,7 +375,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    clear_button.setGeometry(50, 550, 200, 40)
+    clear_button.setGeometry(180, 650, 280, 100)
     clear_button.clicked.connect(Clear)
     
     # creating a button to find whether the IP is global or not. If it is global it prints True
@@ -388,7 +388,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    IP_info_button.setGeometry(270, 750, 150, 40)
+    IP_info_button.setGeometry(375, 550, 220, 60)
     IP_info_button.clicked.connect(ipInfo)
     
     # creating a button to find the netmask
@@ -401,7 +401,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-    netmask_button.setGeometry(200, 750, 120, 40)
+    netmask_button.setGeometry(375, 450, 220, 60)
     netmask_button.clicked.connect(Netmask)
      
     
