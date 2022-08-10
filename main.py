@@ -318,12 +318,12 @@ class MainWindow():
     myIP_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     myIP_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
-        "border-radius: 25px;" +
+        "border-radius: 15px;" +
         "color: 'black';" +
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"           
     ) # setting border style
-    myIP_button.setGeometry(50, 300, 200, 40)
+    myIP_button.setGeometry(50, 350, 220, 50)
     myIP_button.clicked.connect(myIPAddress)
     
     # creating a button to show the hostname
@@ -331,12 +331,12 @@ class MainWindow():
     myHostName_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
     myHostName_button.setStyleSheet(
         "*{border: 5px solid '#2F4F4F';" +
-        "border-radius: 25px;" +
+        "border-radius: 15px;" +
         "color: 'black';" +
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    myHostName_button.setGeometry(50, 350, 200, 40)
+    myHostName_button.setGeometry(375, 350, 220, 50)
     myHostName_button.clicked.connect(myHostName)
     
     # creating a button to convert binary to decimal
@@ -349,7 +349,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    binToDec_button.setGeometry(50, 450, 200, 40)
+    binToDec_button.setGeometry(50, 400, 200, 40)
     binToDec_button.clicked.connect(BinToDec)
     
     # creating a button to convert decimal to binary
@@ -388,7 +388,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    IP_info_button.setGeometry(50, 600, 200, 40)
+    IP_info_button.setGeometry(270, 750, 150, 40)
     IP_info_button.clicked.connect(ipInfo)
     
     # creating a button to find the netmask
@@ -401,7 +401,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-    netmask_button.setGeometry(50, 650, 200, 40)
+    netmask_button.setGeometry(200, 750, 120, 40)
     netmask_button.clicked.connect(Netmask)
      
     
@@ -415,7 +415,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"                                 
     ) # setting border style
-    exit_button.setGeometry(50, 400, 200, 40)
+    exit_button.setGeometry(500, 750, 120, 40)
     exit_button.clicked.connect(close_window)
      
     
