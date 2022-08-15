@@ -109,7 +109,7 @@ class MainWindow():
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" +
-                "color: red;" +
+                "color: red;" 
             )
                         
         else:
