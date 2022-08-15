@@ -85,22 +85,6 @@ class MainWindow():
         
     def BinToDec():         
         
-        # binary_number = int(binToDec_input.text())
-        # count_bin_num = 0
-        # while(binary_number > 0):
-        #     count_bin_num = count_bin_num + 1
-        #     binary_number = binary_number // 10
-        # print("The number of digits in the number are:", count_bin_num)
-        
-        # if count_bin_num > 8:
-            
-        #     error_msg_label.setText("You exceeded the limit. \nMax 8 digits allowed")
-        #     error_msg_label.setStyleSheet(
-        #         "background-color: white;" +
-        #         "border-color: white;" + 
-        #         "font: 50px;" +
-        #         "color: red;"
-        #     )
         
         if binToDec_input.text() == '':
             
@@ -389,8 +373,6 @@ class MainWindow():
     ) # setting border style
     IP_info_button.setGeometry(375, 550, 220, 60)
     IP_info_button.clicked.connect(ipInfo)
-    
-    
     
     # creating a button to find the netmask
     netmask_button = QPushButton("Netmask", right_vert_frame)
