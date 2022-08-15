@@ -372,7 +372,7 @@ class MainWindow():
         "border-radius: 25px;" +
         "color: 'black';" +
         "font-size: 20px;}" +
-        "*:hover{background: '#2F4F4F';}"            
+        "*:hover{background: '#2F4F4F';}"             
     ) # setting border style
     clear_button.setGeometry(180, 650, 280, 100)
     clear_button.clicked.connect(Clear)
