@@ -306,7 +306,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"           
     ) # setting border style
-    myIP_button.setGeometry(50, 350, 220, 50)
+    myIP_button.setGeometry(100, 350, 220, 50)
     myIP_button.clicked.connect(myIPAddress)
     
     # creating a button to show the hostname
@@ -319,7 +319,7 @@ class MainWindow():
         "font-size: 20px;}" +
         "*:hover{background: '#2F4F4F';}"            
     ) # setting border style
-    myHostName_button.setGeometry(375, 350, 220, 50)
+    myHostName_button.setGeometry(325, 350, 220, 50)
     myHostName_button.clicked.connect(myHostName)
     
     # creating a button to convert binary to decimal
