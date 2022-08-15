@@ -605,20 +605,21 @@ class MainWindow():
     
     
     # Creating a title for the calculator
-    title = QLabel("IP subnet Calculator", top_horiz_frame)
-    # title.setStyleSheet(
-    #     "color: black;" +
-    #     "font-size: 45px;" 
-    # )
-    # title.setWordWrap(True)
-    title.setGeometry(500, 5, 550, 40)
+    title = QLabel("IP subnet Calculator", title_frame)
+    title.setStyleSheet(
+        "color: black;" +
+        "border-color: white;" +
+        "font-size: 45px;" 
+    )
+    title.setWordWrap(True)
+    title.setGeometry(500, 5, 550, 80)
     
-    # Adding an image
-    image = QLabel(title_frame)
-    # image.setGeometry(30, 120, 50, 40)
-    image.setAlignment(Qt.AlignCenter)
-    pixmap = QPixmap('1.png')
-    image.setPixmap(pixmap)
+    # # Adding an image
+    # image = QLabel(title_frame)
+    # # image.setGeometry(30, 120, 50, 40)
+    # image.setAlignment(Qt.AlignCenter)
+    # pixmap = QPixmap('1.png')
+    # image.setPixmap(pixmap)
     
     
     # Window is hidden by default that is why we are showing it
