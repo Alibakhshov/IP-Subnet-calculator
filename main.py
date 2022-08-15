@@ -88,7 +88,7 @@ class MainWindow():
         
         if binToDec_input.text() == '':
             
-            error_msg_label.setText("Please enter \n your binary number")
+            error_msg_label.setText("Please enter \n your binary number. \n Ex: 10101111")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
@@ -120,7 +120,7 @@ class MainWindow():
     def DecToBin():
         
         if decToBin_input.text() == '':
-            error_msg_label.setText("Please enter your \n decimal value")
+            error_msg_label.setText("Please enter your \n decimal value. \n Ex: 175")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
@@ -142,7 +142,7 @@ class MainWindow():
         
         
         if info_about_ip_input.text() == '':
-            error_msg_label.setText("Please enter \n an IP address ")
+            error_msg_label.setText("Please enter \n an IP address. \n Ex: 192.168.0.0 ")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
@@ -486,7 +486,7 @@ class MainWindow():
         "border-color: white;" + 
         "font: 35px;"
     )
-    # decToBin_label.setFont(QFont('Arial', 11))
+    
     
      # Creating a label to for converting decimal to binary
     decToBin_label = QLabel("Enter decimal number", bottom_horiz_frame)
@@ -496,6 +496,16 @@ class MainWindow():
         "border-color: white;" + 
         "font: 35px;"
     )
+    
+     # Creating a label to for converting decimal to binary
+    IP_info_label = QLabel("Enter an IP address", bottom_horiz_frame)
+    IP_info_label.setGeometry(5, 155, 500, 100)
+    IP_info_label.setStyleSheet(
+        "background-color: white;" +
+        "border-color: white;" + 
+        "font: 35px;"
+    )
+    
     
     # prints Is global on the top horizontal frame
     global_label = QLabel(top_horiz_frame)
@@ -595,20 +605,20 @@ class MainWindow():
     
     
     # Creating a title for the calculator
-    # title = QLabel("IP subnet Calculator", left_frame)
+    title = QLabel("IP subnet Calculator", top_horiz_frame)
     # title.setStyleSheet(
     #     "color: black;" +
     #     "font-size: 45px;" 
     # )
-    # # title.setWordWrap(True)
-    # title.setGeometry(500, 25, 550, 40)
+    # title.setWordWrap(True)
+    title.setGeometry(500, 5, 550, 40)
     
     # Adding an image
-    # image = QLabel(title_frame)
-    # # image.setGeometry(30, 120, 50, 40)
-    # image.setAlignment(Qt.AlignCenter)
-    # pixmap = QPixmap('1.png')
-    # image.setPixmap(pixmap)
+    image = QLabel(title_frame)
+    # image.setGeometry(30, 120, 50, 40)
+    image.setAlignment(Qt.AlignCenter)
+    pixmap = QPixmap('1.png')
+    image.setPixmap(pixmap)
     
     
     # Window is hidden by default that is why we are showing it
