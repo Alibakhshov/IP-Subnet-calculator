@@ -102,7 +102,7 @@ class MainWindow():
         #         "color: red;"
         #     )
         
-        if int(binToDec_input.text()) == '':
+        if binToDec_input.text() == '':
             
             error_msg_label.setText("Please enter \n your binary number")
             error_msg_label.setStyleSheet(
