@@ -85,31 +85,31 @@ class MainWindow():
         
     def BinToDec():         
         
-        binary_number = int(binToDec_input.text())
-        count_bin_num = 0
-        while(binary_number > 0):
-            count_bin_num = count_bin_num + 1
-            binary_number = binary_number // 10
-        print("The number of digits in the number are:", count_bin_num)
+        # binary_number = int(binToDec_input.text())
+        # count_bin_num = 0
+        # while(binary_number > 0):
+        #     count_bin_num = count_bin_num + 1
+        #     binary_number = binary_number // 10
+        # print("The number of digits in the number are:", count_bin_num)
         
-        if count_bin_num > 8:
+        # if count_bin_num > 8:
             
-            error_msg_label.setText("You exceeded the limit. \nMax 8 digits allowed")
-            error_msg_label.setStyleSheet(
-                "background-color: white;" +
-                "border-color: white;" + 
-                "font: 50px;" +
-                "color: red;"
-            )
+        #     error_msg_label.setText("You exceeded the limit. \nMax 8 digits allowed")
+        #     error_msg_label.setStyleSheet(
+        #         "background-color: white;" +
+        #         "border-color: white;" + 
+        #         "font: 50px;" +
+        #         "color: red;"
+        #     )
         
-        elif int(binToDec_input.text()) == '':
+        if int(binToDec_input.text()) == '':
             
             error_msg_label.setText("Please enter \n your binary number")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
                 "font: 55px;" +
-                "color: red;"
+                "color: red;" +
             )
                         
         else:
