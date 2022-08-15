@@ -390,6 +390,8 @@ class MainWindow():
     IP_info_button.setGeometry(375, 550, 220, 60)
     IP_info_button.clicked.connect(ipInfo)
     
+    
+    
     # creating a button to find the netmask
     netmask_button = QPushButton("Netmask", right_vert_frame)
     netmask_button.setCursor(QCursor(QtCore.Qt.PointingHandCursor)) # setting cursor to pointer
