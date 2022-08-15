@@ -173,7 +173,7 @@ class MainWindow():
     def Netmask():
         
         if info_about_ip_input.text() == '':
-            error_msg_label.setText("Please enter \n an IP address ")
+            error_msg_label.setText("Please enter \n an IP address. \n Ex: 192.168.0.0/16 ")
             error_msg_label.setStyleSheet(
                 "background-color: white;" +
                 "border-color: white;" + 
@@ -199,14 +199,14 @@ class MainWindow():
             
             
 
-        # get the network mask
-        print("Network mask:", network.netmask)
+        # # get the network mask
+        # print("Network mask:", network.netmask)
 
-        # get the broadcast address
-        print("Broadcast address:", network.broadcast_address)
+        # # get the broadcast address
+        # print("Broadcast address:", network.broadcast_address)
 
-        # print the number of IP addresses under this network
-        print("Number of hosts under", str(network), ":", network.num_addresses)
+        # # print the number of IP addresses under this network
+        # print("Number of hosts under", str(network), ":", network.num_addresses)
         
         
     
