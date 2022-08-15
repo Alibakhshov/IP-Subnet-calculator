@@ -101,7 +101,18 @@ class MainWindow():
                 "font: 50px;" +
                 "color: red;"
             )
-         
+        
+        elif binToDec_input.text() == '':
+            
+            error_msg_label.setText("Please enter \n your binary number")
+            error_msg_label.setStyleSheet(
+                "background-color: white;" +
+                "border-color: white;" + 
+                "font: 55px;" +
+                "color: red;"
+            )
+                        
+            
         else:
             
             binary_number = int(binToDec_input.text())
