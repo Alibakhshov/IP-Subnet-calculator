@@ -1,53 +1,57 @@
-# IP-Subnet-calculator
-This is a sample calculator for estimating the IP subnet
+# IP Subnet Calculator
 
-  ## Table of Contents
+A simple PyQt6-based IP Subnet Calculator with a basic GUI that allows users to input an IP address and subnet mask. It also includes features to display the network address, broadcast address, the number of hosts, and the IP class.
 
-  <ol>
-    <li><a href="#About The Project">About the project</a></li>
-    <li><a href="#Enroll to the course">Enroll to the course</a></li>
-    <li><a href="#What you will learn">What you will learn</a></li>
-    <li><a href="#Contributing">Contributing</a></li>
-    <li><a href="#Acknowledgments">Acknowledgments</a></li>
-    <li><a href="#Contact">Contact</a></li>
-  </ol>
+## Features
 
+- Input fields for IP address and subnet mask.
+- Calculate button to determine subnet information.
+- Display of network address, broadcast address, number of hosts, and IP class.
 
-## About The Course
+## Screenshots
+
+![Screenshot 1](screenshots/1.png)
 
 
+![Screenshot 2](screenshots/2.png)
 
-<p align="right"><a href="#top">back to top</a></p>
+
+## Usage
+
+1. Enter the IP address and subnet mask in the respective input fields.
+2. Click the "Calculate" button to get subnet information.
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.x
+- PyQt6 library
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/ip-subnet-calculator.git
+    ```
+
+2. Install the required libraries:
+
+    ```bash
+    pip install PyQt6
+    ```
+
+3. Run the application:
+
+    ```bash
+    python main.py
+    ```
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions are welcome, please feel free to to make it better. Your contribution is **highly appreciated**
+Contributions are welcome! If you have any suggestions or find a bug, feel free to open an issue or create a pull request.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. 
+## License
 
-1. **Fork** the Project
-2. Create a new **Branch**
-3. **Commit** your Changes 
-4. Push to the **Branch** 
-5. Open a **Pull Request**
-
-<p align="right"><a href="#top">back to top</a></p>
-
-## Acknowledgments
-
-* [Color names](https://htmlcolorcodes.com/color-names/)
-* []()
-* []()
-* [()
-* []()
-* [GitHub Pages](https://pages.github.com)
-
-## Contact
-
-<a href="https://www.linkedin.com/in/rauf-alibakhshov-6b5aa5210/">
-    <img height="40" src="https://cdn2.iconfinder.com/data/icons/social-icon-3/512/social_style_3_in-306.png"/>
-</a>
-
-<a href="https://open.spotify.com/playlist/7KmIUNWrK8wEHfQcQfFrQ1?si=0e2d44043b5a40a4">
-    <img height="40" src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/315_Spotify_logo-128.png"/>
-</a>
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
